@@ -1,110 +1,37 @@
-<html>
-<link rel="stylesheet" type="text/css" href="style.css">
-<head>
-	<title>Sprung Canary</title>
-	<script type="text/javascript" src="//use.typekit.net/xwt7dzp.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-</head>
+---
+layout: default
+title: Home
+---
 
-<div id="header-container">
-	<div class="header">
-		<h1 id="sprung">
-			Sprung Canary
-		</h1>
-		<!--<h1 id="canary">-->
-		<!--Canary-->
-		<!--</h1>-->
-	</div>
-	<div class="navigation">
-		<ul>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Archives</a></li>
-		</ul>
-	</div>
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.content }}
+  </div>
+  {% endfor %}
 </div>
 
-<div class="content-container">
-	<div class="content-container2">
-		<div class="content-container3">
-			<div class="content">
-				<h2>
-					Why I'm working on Pakyow
-				</h2>
-				<p>
-					Bacon ipsum dolor sit amet chicken corned beef tail sausage, venison shankle spare ribs. Swine salami meatloaf tail hamburger, pastrami beef. Ribeye cow frankfurter fatback boudin biltong sausage kielbasa bresaola shank filet mignon chicken. Ham hock turducken meatloaf beef ribs, frankfurter spare ribs ribeye prosciutto. Ham hock beef rump, prosciutto t-bone strip steak andouille beef ribs sausage kielbasa tongue biltong swine.
-				</p>
-				<p>
-					Kielbasa ham drumstick andouille, ham hock hamburger pancetta shankle meatloaf tongue spare ribs sirloin. Ham hock drumstick ribeye venison jowl, frankfurter brisket pastrami short loin sirloin andouille tail salami leberkas pork. Boudin ribeye chuck shank hamburger pork chop. Shoulder ham corned beef, bacon t-bone frankfurter capicola pork chop rump fatback biltong brisket swine. Leberkas ball tip turkey, tongue ribeye doner spare ribs strip steak beef biltong pastrami. Ham brisket andouille short ribs filet mignon.
-				</p>
-				<p>
-					Bacon ipsum dolor sit amet chicken corned beef tail sausage, venison shankle spare ribs. Swine salami meatloaf tail hamburger, pastrami beef. Ribeye cow frankfurter fatback boudin biltong sausage kielbasa bresaola shank filet mignon chicken. Ham hock turducken meatloaf beef ribs, frankfurter spare ribs ribeye prosciutto. Ham hock beef rump, prosciutto t-bone strip steak andouille beef ribs sausage kielbasa tongue biltong swine.
-				</p>
-				<p>
-					Kielbasa ham drumstick andouille, ham hock hamburger pancetta shankle meatloaf tongue spare ribs sirloin. Ham hock drumstick ribeye venison jowl, frankfurter brisket pastrami short loin sirloin andouille tail salami leberkas pork. Boudin ribeye chuck shank hamburger pork chop. Shoulder ham corned beef, bacon t-bone frankfurter capicola pork chop rump fatback biltong brisket swine. Leberkas ball tip turkey, tongue ribeye doner spare ribs strip steak beef biltong pastrami. Ham brisket andouille short ribs filet mignon.
-				</p>
-			</div>
-			<div class="aside">
-				<h3>
-					Simplicity
-				</h3>
-				<p>
-					Bacon ipsum dolor sit amet chicken corned beef tail sausage, venison shankle spare ribs. Swine salami meatloaf tail hamburger, pastrami beef. Ribeye cow frankfurter
-				</p>
-			</div>
-			<div class="aside">
-				<h3>
-					Consistency
-				</h3>
-				<p>
-					Bacon ipsum dolor sit amet chicken corned beef tail sausage, venison shankle spare ribs. Swine salami meatloaf tail hamburger, pastrami beef. Ribeye cow frankfurter
-				</p>
-			</div>
-			<div class="aside">
-				<h3>
-					Further
-				</h3>
-				<p>
-					<a href="#">Look here</a> for info on ...
-				</p>
-				<p>
-					<a href="#">And here</a> for more on ...
-				</p>
-			</div>
-		</div>
-
-		<hr>
-
-		<div class="content-container3">
-			<div class="content">
-				<h2>
-					I need your help
-				</h2>
-				<p>
-					Bacon ipsum dolor sit amet chicken corned beef tail sausage, venison shankle spare ribs. Swine salami meatloaf tail hamburger, pastrami beef. Ribeye cow frankfurter fatback boudin biltong sausage kielbasa bresaola shank filet mignon chicken. Ham hock turducken meatloaf beef ribs, frankfurter spare ribs ribeye prosciutto. Ham hock beef rump, prosciutto t-bone strip steak andouille beef ribs sausage kielbasa tongue biltong swine.
-				</p>
-				<p>
-					Bacon ipsum dolor sit amet chicken corned beef tail sausage, venison shankle spare ribs. Swine salami meatloaf tail hamburger, pastrami beef. Ribeye cow frankfurter fatback boudin biltong sausage kielbasa bresaola shank filet mignon chicken. Ham hock turducken meatloaf beef ribs, frankfurter spare ribs ribeye prosciutto. Ham hock beef rump, prosciutto t-bone strip steak andouille beef ribs sausage kielbasa tongue biltong swine.
-				</p>
-				<p>
-					Bacon ipsum dolor sit amet chicken corned beef tail sausage, venison shankle spare ribs. Swine salami meatloaf tail hamburger, pastrami beef. Ribeye cow frankfurter fatback boudin biltong sausage kielbasa bresaola shank filet mignon chicken. Ham hock turducken meatloaf beef ribs, frankfurter spare ribs ribeye prosciutto. Ham hock beef rump, prosciutto t-bone strip steak andouille beef ribs sausage kielbasa tongue biltong swine.
-				</p>
-			</div>
-			<div class="aside">
-				<h3>
-					Self-deception
-				</h3>
-				<p>
-					Kielbasa ham drumstick andouille, ham hock hamburger pancetta shankle meatloaf tongue spare ribs sirloin. Ham hock drumstick ribeye venison jowl, frankfurter brisket pastrami
-				</p>
-			</div>
-		</div>
-	</div>
-
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
 </div>
-<div id="footer-container">
-	<div class="footer">
-		Copyright &#169; Sprung Canary, 2014
-	</div>
-</div>
-
-</html>

@@ -1,0 +1,32 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            'Sprung Canary'
+tagline:          ''
+description:      'Barely made it out alive'
+url:              http://hby.github.io
+baseurl:          /
+
+author:
+  name:           'Bret Young'
+  url:            http://sprungcanary.org
+
+paginate:         5
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://github.com/hby
+
+twitter:
+  name1:           '@sprungcanary'
+  url1:            https://twitter.com/sprungcanary
+  name2:           '@hby'
+  url2:            https://twitter.com/hby
