@@ -9,8 +9,8 @@ relative_permalinks: true
 # Setup
 title:            'Sprung Canary'
 tagline:          ''
-description:      'Barely made it out alive'
-url:              http://hby.github.io
+description:      'Barely making it out alive'
+url:              http://sprungcanary.net
 baseurl:          /
 
 author:

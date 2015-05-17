@@ -80,13 +80,13 @@ html {
   color: #000;
   margin-top: 0;
   font-size: 4.00rem;
+  text-align: center;
 }
 
 .sidebar .description {
   font-size: smaller;
   text-align: center;
   color: #7f7f00;
-  padding-right: 30px;
 }
 
 .sidebar-social-item {

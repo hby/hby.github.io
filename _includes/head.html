@@ -8,7 +8,11 @@
 
   <title>
     {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
+      {% if site.tagline == "" %}
+        {{ site.title }}
+      {% else %}
+        {{ site.title }} &middot; {{ site.tagline }}
+      {% endif %}
     {% else %}
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
@@ -26,4 +30,6 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  {% include google_analytics.html %}
 </head>
