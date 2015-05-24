@@ -4,17 +4,16 @@ title: About
 weight: 2
 ---
 
-### [res ipsa loquitur](http://en.wikipedia.org/wiki/Res_ipsa_loquitur)
+What is important to know about me? I'm not really sure.
 
-The more I've thought about what to write here the more I'm convinced to not say anything very specific. Sure, I could
-tell you about what currently interests me in the world of programming languages and software development. But I will
-probably write about more than that (even though other topics have a strange way of relating back to programming).
+Here's an imperfect and possibly changing list of things that might clue you in to what hidden influences and biases I may have.
 
-Other than a handful of things I've had in my head for a long time, I don't have an _agenda_ for this blog. I'm
-guessing that I'll return to a few themes that I think are worth thinking about. But there will be plenty of
-code realted posts as well.
 
-Eventually, there might be categories and tags that can inform (warn?) the reader as to what might be contained here.
-But, for know, I'll let the sum total of the writing define what I am _About_.
+- I've never cared to read any super hero comics but I did buy cartoon strip collections that I would read and reread during high school. My favortites were those by B. Kliban, Johnny Hart, and Charles Schulz
+- I was a huge fan of Bloom County during college.
+- In high school, I never joined a club, participated in an activity, or took a class just to "meet girls."
+- Some of the most meaningful movies to me are Bullitt, The Conversation, Taxi Driver, A Man for All Seasons, The Emperor's Club, and Red Belt.
+- Monty Python's Flying Circus > Saturday Night Live
+- The name of this blog is fairly personal.
 
-Oh, I will say that the name of blog is very personal.
+> You don't have to be a "person of influence" to be influential. In fact, the most influential people in my life are probably not even aware of the things they've taught me. - _Scott Adams_
