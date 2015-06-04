@@ -8,14 +8,14 @@ relative_permalinks: true
 
 # Setup
 title:            'Sprung Canary'
-tagline:          ''
+tagline:          'Barely making it out alive'
 description:      'Barely making it out alive'
 url:              http://sprungcanary.net
-baseurl:          /
+baseurl:          '/'
 
 author:
   name:           'Bret Young'
-  url:            http://sprungcanary.org
+  url:            http://sprungcanary.net
 
 paginate:         5
 
