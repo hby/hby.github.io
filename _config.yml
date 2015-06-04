@@ -13,6 +13,9 @@ description:      'Barely making it out alive'
 url:              http://sprungcanary.net
 baseurl:          '/'
 
+feed:
+  copyright:      'Copyright (c) 2015, Bret Young; all rights reserved.'
+
 author:
   name:           'Bret Young'
   url:            http://sprungcanary.net
