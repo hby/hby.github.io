@@ -32,7 +32,8 @@
  */
 
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 @media (min-width: 48em) {
   html {
@@ -57,7 +58,7 @@ html {
   text-align: center;
   /*padding: 2rem 1rem;*/
   color: #000;
-  background-color: #ff0;
+  background-color: #ffff00;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -76,17 +77,30 @@ html {
 }
 
 /* About section */
-.sidebar-about h1 {
-  color: #000;
-  margin-top: 0;
-  font-size: 4.00rem;
+.sidebar-title {
   text-align: center;
 }
 
-.sidebar .description {
+.sidebar-title .title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.sidebar-title h1 {
+  color: #000;
+  margin-top: 0;
+  font-size: 4.00rem;
+}
+
+.sidebar-title h2 {
+  color: #000;
+  margin-top: 0;
+/*  font-size: 1.50rem;*/
+}
+
+.sidebar-title .tagline {
   font-size: smaller;
-  text-align: center;
-  color: #7f7f00;
+  color: #808000;
 }
 
 .sidebar-social-item {
@@ -158,8 +172,13 @@ a.sidebar-nav-item:focus {
   font-size: smaller;
 }
 
+.content .small {
+  font-size: small;
+}
+
 .content .lighter {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
 }
 
 @media (min-width: 48em) {
