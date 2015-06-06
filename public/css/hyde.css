@@ -56,7 +56,7 @@ html {
 
 .sidebar {
   text-align: center;
-  /*padding: 2rem 1rem;*/
+  padding: 1rem;
   color: #000;
   background-color: #ffff00;
 }
@@ -84,6 +84,7 @@ html {
 .sidebar-title .title {
   text-transform: uppercase;
   font-weight: 700;
+  word-spacing: 0.75rem;
 }
 
 .sidebar-title h1 {
