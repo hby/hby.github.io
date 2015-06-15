@@ -16,7 +16,7 @@
         {{ site.title }} &middot; {{ site.tagline }}
       {% endif %}
     {% else %}
-      {{ page.title }} &middot; {{ site.title }}
+      {{ page.title }}{% if page.series_num %} #{{page.series_num}}{% endif %} &middot; {{ site.title }}
     {% endif %}
   </title>
 
