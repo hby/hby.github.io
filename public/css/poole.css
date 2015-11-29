@@ -162,28 +162,29 @@ pre {
 code {
   /*padding: .25em .5em;*/
   font-size: 75%;
-  background-color: #ffe;
+  background-color: #eee;
   /*color: #bf616a;*/
   /*background-color: #f9f9f9;*/
   /*border-radius: 3px;*/
   border: dashed 1px;
-  /*border-color: #bf616a;*/
+  border-color: #ccc;
 }
 pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
-  padding: 1rem;
-  font-size: .8rem;
-  line-height: 1.4;
+  padding: 0.5rem;
+  font-size: .6em;
+  line-height: 1.3;
   white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
+/*  white-space: pre-wrap;*/
+/*  word-break: break-all;*/
+/*  word-wrap: break-word;*/
   /*background-color: #f9f9f9;*/
-  background-color: #ffe;
+  background-color: #eee;
   border: dashed 1px;
-  /*border-color: #bf616a;*/
+  border-color: #ccc;
+  overflow-x: scroll;
 }
 pre code {
   padding: 0;
