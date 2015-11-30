@@ -62,7 +62,7 @@ With this mindset, the REPL environment then provides a way to get the code deve
 But RET puts the emphasis on the _thinking_ about your problem and the REPL is a means to that end.
 It's a way to enable the thinking.
 
-_This_ is not keybord driven writing. I would humbly submit it is keyboard enabled storytelling.
+_This_ is not keyboard driven writing. I would humbly submit it is keyboard enabled storytelling.
 
 One of the heroes of my technical formative years is [Richard A. O'Keefe](https://en.wikipedia.org/wiki/Richard_O%27Keefe).
 In the introduction of his book [The Craft of Prolog](https://mitpress.mit.edu/index.php?q=books/craft-prolog) he says,
@@ -72,20 +72,29 @@ understand your programming language, and in neither case does your code stand m
   ― _Richard A. O'Keefe, The Craft of Prolog_  
 
 This points out that the key to success involves _understanding_.
-We are in the business of thought work. But no two people have the same mind.
+We are in the business of thought work. But here's the rub, no two people have the same mind.
 I think the hardest thing in the world is for one mind to understand another mind.
-I often think that many of the debates within the software world could be less volatile if we kept in focus the notion
-that different minds think differently. I helps some people to write their tests first but for others there are
-situations where this would be a roadblock.
-I want to whisper, "It's ok, you can do what works for you." But that's another story.
+I'm probably naive in this but I often think that many of the debates within the software world could be less volatile
+if we kept in focus the notion that different minds think differently.
 
-But it does relate to the REPL story in that REPL Enabled Thinking most accurately describes what I'm setting out to do.
-To come to an understanding of my problem by directly manipulating parts of the problem data enabled by the tools
-I have in the REPL. And I can build on the tools by adding functions and saving some to use as part of the final solution.
-I can also wrote tests as I go to capture how I want things to work as I figure them out. Is one fluid work flow where
-I can do all of these things. I don't focus on _doing_ as much as learning to _understand_ my problem space.
+And ... are you ready? ... that's ok.
+
+It helps some people to write their tests first because something clicked in their thinking about ordering things this
+way and they resonate with this way of working.
+But for others, there are situations where this would be a roadblock to them understanding their problem.
+Whenever the debate volume increases I want to whisper, "It's ok, you can do what works for you." But that's another story.
+
+But this idea, that understanding and thinking is paramount, relates to my REPL story because REPL Enabled Thinking
+most accurately describes what I'm setting out to do.
+As I start to explore this problem and its data, I gain understanding by directly manipulating parts of the data,
+enabled by the tools I have in the REPL.
+And I can build on these tools by adding more functions, possibly saving some to use as part of the final solution.
+Along the way, I can write tests, documentation, or whatever, to capture how I want things to work as I figure them out.
+All in the same environment.
+It's one fluid workflow where I can do all of these things at the time that best fits with how I'm thinking about the problem.
+I don't focus on _doing_ as much as learning to _understand_ my problem space.
 It's a subtle shift in thinking but I believe a meaningful one. It's also the difference
-between assuming you know everything about your problem, banging out some code with passing tests, and thinking you're
+between assuming you know everything about your problem, banging out some code with passing tests, and then thinking you're
 finished. Unlikely.
 
 ## Back to the REPL
