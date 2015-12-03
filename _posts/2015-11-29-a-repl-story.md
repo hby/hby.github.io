@@ -734,6 +734,10 @@ You can set a var in the REPL by
 {% endhighlight %}
 
 I have found that not all REPL environments honor this. Could be something I've done wrong, though.
+
+__[UPDATE:__ I must have done something wrong, as I suspected. I went back to try this out and these setting are
+being honored. I've only tried them out in Cursive but have no reason to believe they don't work everywhere.__]__
+
 But even if they do, I wanted more flexibility than they provide.
 However, they are good to know about and setting values for them does make a good safety measure in case you do
 stumble across some data that is larger than you thought.
