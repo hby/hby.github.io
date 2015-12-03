@@ -1,7 +1,6 @@
 ---
 layout: post
 title: A REPL Story
-comments: true
 tags: [clojure, repl, workflow]
 ---
 
