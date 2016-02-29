@@ -102,11 +102,11 @@ finished. Unlikely.
 After a quick search I found the [clj-plist](https://github.com/bdesham/clj-plist) library.
 That was helpful. No need to write a plist parser. Just add the dependency to my `project.clj` file and I'm good to go.
 
-{% highlight clojure %}
+```clojure
 (defproject itq "0.1.0-SNAPSHOT"
 
   :dependencies [[com.github.bdesham/clj-plist "0.9.1"]])
-{% endhighlight %}
+```
 
 In this case I know I'm going to want to save some of what I do in the REPL.
 So, I start by creating a file to hold a namespace of things that I'll create while exploring the iTunes data.
@@ -115,7 +115,7 @@ A glance at the `clj-plist` docs and I know how to turn a plist file into Clojur
 So, after copying the iTunes library I want to use into the project,
 I start with these forms in a file that I evaluate in the REPL.
 
-{% highlight clojure %}
+```clojure
 (ns itq.parse
   (:require [com.github.bdesham.clj-plist :as pl])
   (:import [java.io File]))
@@ -123,35 +123,35 @@ I start with these forms in a file that I evaluate in the REPL.
 (def itl
   (pl/parse-plist
     (File. "<path-to-project>/itq/iTunes Music Library.xml")))
-{% endhighlight %}
+```
 
 Then, place the REPL in the `itq.parse` namespace.
 
-{% highlight clojure %}
+```clojure
 (in-ns 'itq.parse)
-{% endhighlight %}
+```
 
 In theory, `itl` has my iTunes library as a Clojure data structure.
 Finally (well, it really hasn't been that long), I can look at it. So, I type in the REPL
 
-{% highlight clojure %}
+```clojure
 itl
-{% endhighlight %}
+```
 
 But before hitting return I start _thinking ... I have a pretty big iTunes library ...
 I've been here before ... the REPL is going to take a while as it prints out my library data ...
 and I'm not really going to learn much of anything ... I better check what it is and how big it is ..._
 
-{% highlight clojure %}
+```clojure
 (class itl)
 => clojure.lang.PersistentHashMap
 (count itl)
 => 10
-{% endhighlight %}
+```
 
 _Hmmm, only 10 keys, what are they?_
 
-{% highlight clojure %}
+```clojure
 (keys itl)
 =>
 ("Major Version"
@@ -164,12 +164,12 @@ _Hmmm, only 10 keys, what are they?_
  "Application Version"
  "Library Persistent ID"
  "Features")
-{% endhighlight %}
+```
 
 `"Tracks"` sounds promising but there's some large collections in there somewhere.
 Easy enough to see what I'm dealing with ...
 
-{% highlight clojure %}
+```clojure
 (into {} 
       (map
         (fn [[k v]] [k [(class v) (if (coll? v) (str (count v) " items") v)]])
@@ -185,7 +185,7 @@ Easy enough to see what I'm dealing with ...
  "Application Version" [java.lang.String "12.3.1.23"],
  "Library Persistent ID" [java.lang.String "88ABD0BA83F503C5"],
  "Features" [java.lang.Long 5]}
- {% endhighlight %}
+```
 
 Yep, a lot of tracks. I should say that what I'm eventually going to want to do is read in my artist,
 album, and track information into a [Datomic](http://www.datomic.com) database so I can play with the data even more.
@@ -194,7 +194,7 @@ To do that I want to know how the data is organized in this file. It looks like 
 I could continue this process of cautiously peeking into the structures to get an idea of their size before fully looking
 at or a part of it.
 
-{% highlight clojure %}
+```clojure
 (def tracks (itl "Tracks"))
 => #'itq.parse/tracks
 
@@ -205,12 +205,12 @@ at or a part of it.
 (let [[[tk tv]] (take 1 tracks)]
   [(class tk) (count tv)])
 => [java.lang.String 27]
-{% endhighlight %}
+```
 
 Ok, 27 keys is not too bad but I don't know what the values are and this is getting a little tedious. I should be able
 to write some functions to help speed this up. After a little playing (right in the REPL) I come up with this.
 
-{% highlight clojure %}
+```clojure
 (declare explore-map)
 (declare explore-vector)
 (defn explore
@@ -255,19 +255,19 @@ to write some functions to help speed this up. After a little playing (right in 
         more (str (count rest) " more entries")]
     (conj (mapv (fn [e] (explore e t p)) peeked)
           more)))
-{% endhighlight %}
+```
 
 I'll let the appropriate function look inside of the structure and if the size is under a threshold I'll show it all,
 otherwise I'll only show a part of it.
 
-{% highlight clojure %}
+```clojure
 (explore tracks 10 1)
 => {"30645" {"Library Folder Count" 1, :more "26 more entries"}, :more "23176 more entries"}
-{% endhighlight %}
+```
 
 Oh yeah, I already know there are 27 keys in that map.
 
-{% highlight clojure %}
+```clojure
 (explore tracks 28 1)
 =>
 {"30645" {"Library Folder Count" 1,
@@ -379,7 +379,7 @@ Oh yeah, I already know there are 27 keys in that map.
           "File Folder Count" 5,
           "Kind" "AAC audio file"},
   :more "23174 more entries"}
-{% endhighlight %}
+```
 
 It's track info keyed on the `"Track ID"`. I'll probably just want the tracks in a flat collection.
 Also, It looks like there's some variation between track map keys. This kind of thing makes me curious (well, more curious).
@@ -387,7 +387,7 @@ I wonder what is the maximum set of track keys across all of the tracks?
 Also, what is the full set of keys ever used? Should just be a function away. Actually, let's make it a few functions and
 flatten down the track info while we're at it.
 
-{% highlight clojure %}
+```clojure
 (def tracks (into [] (vals (itl "Tracks"))))
 => #'itq.parse/tracks
 
@@ -471,12 +471,12 @@ flatten down the track info while we're at it.
  ["Volume Adjustment" 5]
  ["Year" 18734]
  ["iTunesU" 2535])
-{% endhighlight %}
+```
 
 That's the full set of keys and how many times each is used. I would like to know the type of values behind each key,
 and make sure we're done with colletions.
 
-{% highlight clojure %}
+```clojure
 (defn track-keys-class
   [tracks]
   (reduce (fn [ks m]
@@ -635,12 +635,12 @@ and make sure we're done with colletions.
  ["Volume Adjustment" [java.lang.Long 5]]
  ["Year" [java.lang.Long 18734]]
  ["iTunesU" [java.lang.Boolean 2535]])
-{% endhighlight %}
+```
 
 Well, I'm happy with this for now. I have a good understanding of the data. I remember something about a `"Playlists"`
 key so I better make sure that's nothing I care about. I'll just `explore` from the top.
 
-{% highlight clojure %}
+```clojure
 (explore itl 11 1)
 =>
 {"Major Version" 1,
@@ -703,7 +703,7 @@ key so I better make sure that's nothing I care about. I'll just `explore` from 
  "Application Version" "12.3.1.23",
  "Library Persistent ID" "88ABD0BA83F503C5",
  "Features" 5}
-{% endhighlight %}
+```
 
 A playlist looks like some info accompanying a list of track ids. None of which I care about right now.
 
@@ -729,9 +729,9 @@ crack open a REPL and start to think about your own story. It's a means to whate
 `clojure.core` defines the vars `*print-length*` and `*print-level*` that a REPL can use to limit its output.
 You can set a var in the REPL by
 
-{% highlight clojure %}
+```clojure
 (set! *print-length* 25)
-{% endhighlight %}
+```
 
 I have found that not all REPL environments honor this. Could be something I've done wrong, though.
 
