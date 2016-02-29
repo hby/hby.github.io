@@ -1,7 +1,8 @@
 # Dependencies
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, classifier-reborn]
 
-markdown:         kramdown
+markdown: kramdown
+highlighter: rouge
 
 kramdown:
   input: GFM
@@ -18,7 +19,7 @@ url:              http://sprungcanary.net
 baseurl:          '/'
 
 feed:
-  copyright:      'Copyright (c) 2015, Bret Young; all rights reserved.'
+  copyright:      'Copyright (c) 2016, Bret Young; all rights reserved.'
 
 author:
   name:           'Bret Young'
