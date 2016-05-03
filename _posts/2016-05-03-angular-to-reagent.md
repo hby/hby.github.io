@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Angular to Reagent
-tags: [angular, clojurescript, react, reagent]
+tags: [angular, clojure, clojurescript, react, reagent]
 ---
 
 This presentation caught my eye the other day.
