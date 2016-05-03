@@ -1,11 +1,23 @@
+- slug: angular
+  name: Angular
+
 - slug: clojure
   name: Clojure
 
-- slug: repl
-  name: REPL
+- slug: clojurescript
+  name: ClojureScript
 
 - slug: personal
   name: Personal
+
+- slug: react
+  name: React
+
+- slug: reagent
+  name: Reagent
+
+- slug: repl
+  name: REPL
 
 - slug: workflow
   name: Workflow
