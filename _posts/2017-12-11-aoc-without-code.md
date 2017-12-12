@@ -13,7 +13,7 @@ When I read the problem for [part 1 of day 03](http://adventofcode.com/2017/day/
 it struck me that you could solve this pretty quickly without writing any code. Here's the answer
 sketched out on my chalkboard.
 
-![aocp3p1](/public/images/aocp3p1_medium.png)
+![aocp3p1]({{ site.baseurl }}public/images/aocp3p1_medium.png)
 
 Of course, you can also write some
 [code](https://github.com/hby/advent-of-code/blob/master/src/advent_of_code/2017/day03.clj)
