@@ -7,6 +7,9 @@
 - slug: clojurescript
   name: ClojureScript
 
+- slug: math
+  name: Math
+
 - slug: personal
   name: Personal
 
