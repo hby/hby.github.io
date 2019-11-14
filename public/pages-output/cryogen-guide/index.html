@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"><![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+    <!-- Website Template designed by www.downloadwebsitetemplates.co.uk -->
+    <!-- Modified to fit Cryogen.-->
+    <meta charset="UTF-8">
+    <title>Sprung Canary: Cryogen Guide</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
+    <link rel="shortcut icon" href="images/ico/favicon.png">
+    <!--[if IE]><![endif]-->
+    <link href="/css/buttons.css" rel="stylesheet" type="text/css" />
+    <link href="/css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/typography.css" rel="stylesheet" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow-night-eighties.min.css">
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+
+<div id="left">
+
+    <p id="logo">
+        <a title="Sprung Canary" href="/">
+            <img src="/img/sg-logo-144.png">
+            <span class="text">Sprung Canary</span>
+            <span class="subtext">Barely making it out alive</span>
+        </a>
+    </p>
+
+    <div id="menucont" class="bodycontainer clearfix">
+        <div class="menutitle">
+            <p><span class="fa fa-reorder"></span><strong>Menu</strong></p>
+        </div>
+        <ul class="menu">
+            <li ><a title="Home" href="/">Home</a></li>
+            <li ><a title="Archives" href="/archives/">Archives</a></li>
+            
+            <li ><a title="Tags" href="/tags/">Tags</a></li>
+            
+            
+            <li >
+                <a href="/pages-output/about/">About</a>
+            </li>
+            
+<!--            <li><a title="RSS" href="/atom.xml">RSS</a></li>-->
+        </ul>
+    </div>
+
+    <div id="socialmedia" class="clearfix">
+        <ul>
+            <li><a title="GitHub" href="http://github.com/hby" rel="external"><span class="fa fa-github"></span></a></li>
+            <li><a title="Twitter" href="http://twitter.com/hby" rel="external"><span class="fa fa-twitter"></span></a></li>
+            <li><a title="Last.fm" href="https://www.last.fm/user/hbretyoung" rel="external"><span class="fa fa-lastfm"></span></a></li>
+            <li><a title="Feed" href="/atom.xml" rel="external"><span class="fa fa-rss"></span></a></li>
+        </ul>
+    </div>
+
+</div>
+
+<div id="right" class="clearfix">
+    
+<div id="custom-page">
+    <div id="page-header">
+        <h1>Cryogen Guide</h1>
+    </div>
+    <ol class="content"><li><a href="#features">Features</a></li><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#usage">Usage</a></li><ol><li><a href="#creating_a_new_site">Creating a New Site</a></li><li><a href="#running_the_server">Running the Server</a></li><li><a href="#site_configuration">Site Configuration</a></li><li><a href="#switching_between_markdown_and_asciidoc">Switching between Markdown and AsciiDoc</a></li><li><a href="#selecting_a_theme">Selecting a Theme</a></li><li><a href="#customizing_layouts">Customizing Layouts</a></li><li><a href="#code_syntax_highlighting">Code Syntax Highlighting</a></li></ol><li><a href="#deploying_your_site">Deploying Your Site</a></li><li><a href="#third_party_libraries">Third Party Libraries</a></li><ol><li><a href="#https://github.com/greywolve/cryogen-markdown-external">https://github.com/greywolve/cryogen-markdown-external</a></li></ol><li><a href="#some_sites_made_with_cryogen">Some Sites Made With Cryogen</a></li></ol>
+    <p>This intro only documents a subset of Cryogen's features. For additional documentation please see the <a href='http://cryogenweb.org'>cryogen site</a>.</p><h2 id="features">Features</h2><ul><li>Blog posts and pages with Markdown (default) or AsciiDoc</li><li>Tags</li><li>Table of contents generation</li><li>Plain HTML page templates</li><li>Code syntax highlighting</li><li>Disqus support</li><li>Sitemap generation</li><li>RSS feed generation</li><li>Sass/SCSS compilation</li><li>Klipse Integration</li></ul><h2 id="prerequisites">Prerequisites</h2><p>You will need <a href='https://github.com/technomancy/leiningen'>Leiningen</a> 2.5.0 or above installed.</p><h2 id="usage">Usage</h2><h3 id="creating&#95;a&#95;new&#95;site">Creating a New Site</h3><p>A new site can be created using the Cryogen template as follows:</p><pre><code>lein new cryogen my-blog
+</code></pre><h3 id="running&#95;the&#95;server">Running the Server</h3><p>The web server can be started from the <code>my-blog</code> directory using the <code>lein-ring</code> plugin:</p><pre><code>lein ring server
+</code></pre><p>The server will watch for changes in the <code>content</code> and <code>themes</code> folders and recompile the content automatically.</p><p>You can also generate the content without bringing up a server via:</p><pre><code>lein run
+</code></pre><h3 id="site&#95;configuration">Site Configuration</h3><p>The site configuration file is found at <code>content/config.edn</code>, this file looks as follows:</p><pre><code class="clojure">{:site-title           &quot;My Awesome Blog&quot;
+ :author               &quot;Bob Bobbert&quot;
+ :description          &quot;This blog is awesome&quot;
+ :site-url             &quot;http://blogawesome.com/&quot;
+ :post-root            &quot;posts&quot;
+ :page-root            &quot;pages&quot;
+ :post-root-uri        &quot;posts-output&quot;
+ :page-root-uri        &quot;pages-output&quot;
+ :tag-root-uri         &quot;tags-output&quot;
+ :author-root-uri      &quot;authors-output&quot;
+ :public-dest          &quot;public&quot;
+ :blog-prefix          &quot;/blog&quot;
+ :rss-name             &quot;feed.xml&quot;
+ :rss-filters          &#91;&quot;cryogen&quot;&#93;
+ :recent-posts         3
+ :post-date-format     &quot;yyyy-MM-dd&quot;
+ :archive-group-format &quot;yyyy MMMM&quot;
+ :sass-src             &#91;&#93;
+ :sass-path            &quot;sass&quot;
+ :compass-path         &quot;compass&quot;
+ :theme                &quot;blue&quot;
+ :resources            &#91;&quot;img&quot;&#93;
+ :keep-files           &#91;&quot;.git&quot;&#93;
+ :disqus?              false
+ :disqus-shortname     &quot;&quot;
+ :ignored-files        &#91;#&quot;\.#.&#42;&quot; #&quot;.&#42;\.swp$&quot;&#93;
+ :previews?            false
+ :posts-per-page       5
+ :blocks-per-preview   2
+ :clean-urls           :trailing-slash
+ :collapse-subdirs?    false
+ :hide-future-posts?   true
+ :klipse               {}
+ :debug?               false}
+</code></pre><p>For information about each key please see the <a href='http://cryogenweb.org/docs/configuration.html'>"Configuration"</a> portion of the Cryogen documentation site.</p><h3 id="switching&#95;between&#95;markdown&#95;and&#95;asciidoc">Switching between Markdown and AsciiDoc</h3><p>Cryogen comes with Markdown support as default. If you want to use AsciiDoc instead, open the <code>project.clj</code> in your created blog (e.g. <code>my-blog</code>), and change the line in <code>:dependencies</code> that says <code>cryogen-markdown</code> to <code>cryogen-asciidoc</code>. Instead of looking for files ending in <code>.md</code> in the <code>content/md</code> directory, the compiler will now look for files ending in <code>.asc</code> in the <code>content/asc</code> directory.</p><h3 id="selecting&#95;a&#95;theme">Selecting a Theme</h3><p>The Cryogen template comes with three themes in the <code>themes</code> folder. To change your blog's theme, change the value of the <code>:theme</code> key in <code>config.edn</code>. Note that the Nucleus theme is obtained from <a href='http://www.downloadwebsitetemplates.co.uk/template/nucleus/'>downloadwebsitetemplates.co.uk</a> that requires you to keep the footer, unless you make a donation on their website.</p><h3 id="customizing&#95;layouts">Customizing Layouts</h3><p>Cryogen uses <a href='https://github.com/yogthos/Selmer'>Selmer</a> templating engine for layouts. Please refer to its documentation to see the supported tags and filters for the layouts.</p><p>The layouts are contained in the <code>themes/{theme}/html</code> folder of the project. By default, the <code>base.html</code> layout is used to provide the general layout for the site. This is where you would add static resources such as CSS and JavaScript assets as well as define headers and footers for your site.</p><p>Each page layout should have a name that matches the <code>:layout</code> key in the page metadata and end with <code>.html</code>. Page layouts extend the base layout and should only contain the content relaveant to the page inside the <code>content</code> block. For example, the <code>tag</code> layout is located in <code>tag.html</code> and looks as follows:</p><pre><code class="xml">{% extends &quot;/html/base.html&quot; %}
+{% block content %}
+&lt;div id=&quot;posts-by-tag&quot;&gt;
+    &lt;h2&gt;Posts tagged {{name}}&lt;/h2&gt;
+    &lt;ul&gt;
+    {% for post in posts %}
+        &lt;li&gt;
+            &lt;a href=&quot;{{post.uri}}&quot;&gt;{{post.title}}&lt;/a&gt;
+        &lt;/li&gt;
+    {% endfor %}
+    &lt;/ul&gt;
+&lt;/div&gt;
+{% endblock %}
+</code></pre><h3 id="code&#95;syntax&#95;highlighting">Code Syntax Highlighting</h3><p>Cryogen uses <a href='https://highlightjs.org/'>Highlight.js</a> for code syntax highlighting. You can add more languages by replacing <code>themes/{theme}/js/highlight.pack.js</code> with a customized package from <a href='https://highlightjs.org/download/'>here</a>.</p><p>The <code> initHighlightingOnLoad</code> function is called in <code>themes/{theme}/html/base.html</code>.</p><pre><code class="xml">&lt;script&gt;hljs.initHighlightingOnLoad&#40;&#41;;&lt;/script&gt;
+</code></pre><h2 id="deploying&#95;your&#95;site">Deploying Your Site</h2><p>The generated static content will be found under the <code>public</code> folder. Simply copy the content to a static folder for a server such as Nginx or Apache and your site is now ready for service.</p><p>A sample Nginx configuration that's placed in <code>/etc/nginx/sites-available/default</code> can be seen below:</p><pre><code class="javascript">server {
+  listen 80 default&#95;server;
+  listen &#91;::&#93;:80 default&#95;server ipv6only=on;
+  server&#95;name localhost &lt;yoursite.com&gt; &lt;www.yoursite.com&gt;;
+
+  access&#95;log  /var/log/blog&#95;access.log;
+  error&#95;log   /var/log/blog&#95;error.log;
+
+  location / {
+    alias       /var/blog/;
+    error&#95;page  404 = /404.html;
+  }
+}
+</code></pre><p>Simply set <code>yoursite.com</code> to the domain of your site in the above configuration and ensure the static content is available at <code>/var/blog/</code>. Finally, place your custom error page in the <code>/var/blog/404.html</code> file.</p><p>More information on deployment can be found <a href='http://cryogenweb.org/docs/deploying-to-github-pages.html'>here</a>.</p><h2 id="third&#95;party&#95;libraries">Third Party Libraries</h2><h4 id="https://github.com/greywolve/cryogen-markdown-external">https://github.com/greywolve/cryogen-markdown-external</h4><p>A Clojure library to provide Markdown rendering to the cryogen-core compiler by using an external command/program, such as pandoc.</p><h2 id="some&#95;sites&#95;made&#95;with&#95;cryogen">Some Sites Made With Cryogen</h2><ul><li><a href='http://carmen.la/blog/archives'>My personal blog</a></li><li><a href='http://cryogenweb.org'>Cryogen Documentation Site</a></li><li><a href='http://yogthos.net/'>Yogthos' blog</a></li><li><a href='http://www.chadstovern.com'>Chad Stovern's blog</a></li><li><a href='http://www.szcz.org/'>szcz</a></li><li><a href='https://blog.isvit.info'>ISvit blog</a></li><li><a href='http://lambdafunk.com'>Lambda Funk</a></li><li><a href='https://ddft.wiki'>DDFT.wiki</a></li></ul>
+
+    <div id="prev-next">
+        
+        <a class="button" href="/pages-output/about/">&laquo; About</a>
+        
+        
+    </div>
+</div>
+
+<hr/>
+<div id="footercont" class="clearfix">Copyright &copy; 2019 Bret Young
+    <p>Powered by <a href="http://cryogenweb.org">Cryogen</a> | Free Website Template by <a title="free website templates" href="http://www.downloadwebsitetemplates.co.uk" rel="external">Download Website Templates</a></p>
+
+</div>
+</div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="/js/highlight.pack.js" type="text/javascript"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/scripts.js" type="text/javascript"></script>
+
+
+</body>
+</html>

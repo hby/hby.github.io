@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="http://sprungcanary.net/" rel="self" type="application/rss+xml"/><title>Sprung Canary</title><link>http://sprungcanary.net/</link><description>Barely making it out alive</description><lastBuildDate>Wed, 13 Nov 2019 17:21:34 -0600</lastBuildDate><generator>clj-rss</generator><item><guid>http://sprungcanary.net/posts-output/2017-12-11-aoc-without-code/</guid><link>http://sprungcanary.net/posts-output/2017-12-11-aoc-without-code/</link><title>Advent of Code, Without the Code</title><description>&lt;p&gt;I've been working (&lt;i&gt;some of&lt;/i&gt;) the &lt;a href='http://adventofcode.com'&gt;Advent of Code&lt;/a&gt; problems since they began just before Christmas in 2015. I've used the problems to exercise some different Clojure muscles than the programming I do for my job.  My solutions are on &lt;a href='https://github.com/hby/advent-of-code'&gt;GitHub&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;When I read the problem for &lt;a href='http://adventofcode.com/2017/day/3'&gt;part 1 of day 03&lt;/a&gt; for this year, it struck me that you could solve this pretty quickly without writing any code. Here's the answer sketched out on my chalkboard.&lt;/p&gt;&lt;p&gt;&lt;img src="/img/aocp3p1_medium.png" alt="chalk board" /&gt;&lt;/p&gt;&lt;p&gt;Of course, you can also write some &lt;a href='https://github.com/hby/advent-of-code/blob/master/src/advent_of_code/2017/day03.clj'&gt;code&lt;/a&gt; (which helps in solving part 2). &lt;/p&gt;&lt;blockquote&gt;&lt;p&gt; "First, solve the problem. Then, write the code." &lt;br&gt;   ― &lt;i&gt;John Johnson&lt;/i&gt; &lt;/p&gt;&lt;/blockquote&gt;</description><pubDate>Mon, 11 Dec 2017 00:00:00 -0600</pubDate></item><item><guid>http://sprungcanary.net/posts-output/2017-04-22-my-kobayashi-maru/</guid><link>http://sprungcanary.net/posts-output/2017-04-22-my-kobayashi-maru/</link><title>My Kobayashi Maru</title><description>&lt;p&gt;Events have me thinking about this a lot lately.&lt;/p&gt;&lt;p&gt;&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/b9dEI-Ru1CI" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;p&gt;Is it always possible to reprogram the simulator? We shall see. I hope to elaborate more later. In the meantime, enjoy one of my favorite scenes in all of Star Trek.&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt; "I never took the Kobayashi Maru test until now. What do you think of my solution?" &lt;br&gt;   ― &lt;i&gt;Spock&lt;/i&gt; &lt;/p&gt;&lt;/blockquote&gt;</description><pubDate>Sat, 22 Apr 2017 00:00:00 -0500</pubDate></item><item><guid>http://sprungcanary.net/posts-output/2016-05-03-angular-to-reagent/</guid><link>http://sprungcanary.net/posts-output/2016-05-03-angular-to-reagent/</link><title>Angular to Reagent</title><description> &lt;p&gt;This presentation caught my eye the other day.&lt;/p&gt;&lt;p&gt;[&lt;b&gt;UPDATE: The video I had linked to is no longer available so I've removed it.&lt;/b&gt; &lt;i&gt;The video is too old to remember specifics but my basic thoughts on Angular at the time was that it was overly complicated at nearly every level of use. In any case, I've never looked back after using the Reagent and re-frame ClojureScript libraries.&lt;/i&gt;]&lt;/p&gt;&lt;p&gt;I worked on a fairly large Angular project a couple of years ago and find myself in general agreement with the points made about Angular. I've also been playing with Reagent recently.&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt; "You know being relevant or coming up with something interesting, funny to say about what's current is just as hard as it might ever be depending on the serendipity of it all." &lt;br&gt;   ― &lt;i&gt;Lily Tomlin&lt;/i&gt; &lt;/p&gt;&lt;/blockquote&gt;</description><pubDate>Tue, 03 May 2016 00:00:00 -0500</pubDate></item><item><guid>http://sprungcanary.net/posts-output/2015-11-29-a-repl-story/</guid><link>http://sprungcanary.net/posts-output/2015-11-29-a-repl-story/</link><title>A REPL Story</title><description>&lt;p&gt;My apologies to Jean Shepherd.&lt;/p&gt;&lt;p&gt;As I've gone through the process of writing this over Thanksgiving weekend, the title has changed three times. I believe I've finally landed on one that best descibes the content. It a rambling story about data and discovery. Hmmm, that gives me an idea for a book, Clojure: One Story at a Time. Or some such nonsense. There's nothing earth shattering here. Unless you're inclined to believe that earth shattering things start with simple thoughts, questions, and explorations.&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt; "Great things are done by a series of small things brought together."&lt;br&gt;   ― Vincent Van Gogh &lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;Lately, I've had a number of project ideas that all have something to do with my iTunes library. What do I know? I know that the information is stored in an XML file, typically located at &lt;code&gt;&amp;#126;/Music/iTunes/iTunes Music Library.xml&lt;/code&gt;, but I didn't really know the format. I do have some experience with NeXT/Mac OS X/iOS development and figured it was a &lt;a href='https://en.wikipedia.org/wiki/Property_list'&gt;plist&lt;/a&gt; file. Sure enough, taking a peek inside showed that was the case. However, knowing it is a plist file conveys about the same information as saying it's a JSON file. I need to know &lt;i&gt;what&lt;/i&gt; data is under &lt;i&gt;what&lt;/i&gt; keys and how is it all organized. This seemed like a good job for starting a Clojure REPL and doing some exploring. So, a REPLing we will go ...&lt;/p&gt;&lt;h2 id="starting&amp;#95;the&amp;#95;repl"&gt;Starting the REPL&lt;/h2&gt;&lt;p&gt;There are a number of good sources for running a Clojure REPL (&lt;a href='http://clojure.org/repl_and_main'&gt;clojure.org&lt;/a&gt;, &lt;a href='http://www.braveclojure.com/getting-started/#Using_the_REPL'&gt;braveclojure.com&lt;/a&gt;). I really like &lt;a href='https://cursiveclojure.com'&gt;Cursive Clojure&lt;/a&gt; so I typically set up a &lt;a href='http://leiningen.org'&gt;Leiningen&lt;/a&gt; project and get a local REPL going with &lt;a href='https://cursiveclojure.com/userguide/repl.html'&gt;these instructions&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;So, with a quick&lt;/p&gt;&lt;pre&gt;&lt;code&gt;$ lein new itq
+$ cd itq
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I am in the &lt;code&gt;itq&lt;/code&gt; (iTunes query) project. You can set up a REPL in your editor/environment of choice or just run&lt;/p&gt;&lt;pre&gt;&lt;code&gt;$ lein repl
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="a&amp;#95;way&amp;#95;of&amp;#95;_thinking_"&gt;A way of &lt;i&gt;thinking&lt;/i&gt;&lt;/h2&gt;&lt;p&gt;REPL driven development (RDD) has been talked about a lot (see &lt;a href='https://www.google.com/search?client=safari&amp;rls=en&amp;q=repl+driven+development&amp;ie=UTF-8&amp;oe=UTF-8'&gt;Google&lt;/a&gt;). This is good but I feel like I should nuance it just a little and, instead of using the phrase REPL Driven Development, I want to suggest the phrase REPL &lt;i&gt;Enabled&lt;/i&gt; &lt;i&gt;Thinking&lt;/i&gt; (RET).&lt;/p&gt;&lt;p&gt;For me, &lt;i&gt;thinking&lt;/i&gt; undergirds development. And thinking continues during and remains after development. I need to &lt;i&gt;think&lt;/i&gt; about the problem, the domain, the data, and anything else that comes to mind. The Clojure language and its REPL are just tools that allow my mind to explore the space of the problem that I'm interested in. RDD seems to me to put the emphasis on &lt;i&gt;doing&lt;/i&gt; development. With this mindset, the REPL environment then provides a way to get the code developed. But RET puts the emphasis on the &lt;i&gt;thinking&lt;/i&gt; about your problem and the REPL is a means to that end. It's a way to enable the thinking.&lt;/p&gt;&lt;p&gt;&lt;i&gt;This&lt;/i&gt; is not keyboard driven writing. I would humbly submit it is keyboard enabled storytelling.&lt;/p&gt;&lt;p&gt;One of the heroes of my technical formative years is &lt;a href='https://en.wikipedia.org/wiki/Richard_O%27Keefe'&gt;Richard A. O'Keefe&lt;/a&gt;. In the introduction of his book &lt;a href='https://mitpress.mit.edu/index.php?q=books/craft-prolog'&gt;The Craft of Prolog&lt;/a&gt; he says,&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt; "If your Prolog code is ugly, the chances are that you either don't understand your problem or you don't understand your programming language, and in neither case does your code stand much a chance of being efficient."&lt;br&gt;   ― &lt;i&gt;Richard A. O'Keefe, The Craft of Prolog&lt;/i&gt; &lt;br /&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;This points out that the key to success involves &lt;i&gt;understanding&lt;/i&gt;. We are in the business of thought work. But here's the rub, no two people have the same mind. I think the hardest thing in the world is for one mind to understand another mind. I'm probably naive in this but I often think that many of the debates within the software world could be less volatile if we kept in focus the notion that different minds think differently.&lt;/p&gt;&lt;p&gt;And ... are you ready? ... that's ok.&lt;/p&gt;&lt;p&gt;It helps some people to write their tests first because something clicked in their thinking about ordering things this way and they resonate with this way of working. But for others, there are situations where this would be a roadblock to them understanding their problem. Whenever the debate volume increases I want to whisper, "It's ok, you can do what works for you." But that's another story.&lt;/p&gt;&lt;p&gt;But this idea, that understanding and thinking is paramount, relates to my REPL story because REPL Enabled Thinking most accurately describes what I'm setting out to do. As I start to explore this problem and its data, I gain understanding by directly manipulating parts of the data, enabled by the tools I have in the REPL. And I can build on these tools by adding more functions, possibly saving some to use as part of the final solution. Along the way, I can write tests, documentation, or whatever, to capture how I want things to work as I figure them out. All in the same environment. It's one fluid workflow where I can do all of these things at the time that best fits with how I'm thinking about the problem. I don't focus on &lt;i&gt;doing&lt;/i&gt; as much as learning to &lt;i&gt;understand&lt;/i&gt; my problem space. It's a subtle shift in thinking but I believe a meaningful one. It's also the difference between assuming you know everything about your problem, banging out some code with passing tests, and then thinking you're finished. Unlikely.&lt;/p&gt;&lt;h2 id="back&amp;#95;to&amp;#95;the&amp;#95;repl"&gt;Back to the REPL&lt;/h2&gt;&lt;p&gt;After a quick search I found the &lt;a href='https://github.com/bdesham/clj-plist'&gt;clj-plist&lt;/a&gt; library. That was helpful. No need to write a plist parser. Just add the dependency to my &lt;code&gt;project.clj&lt;/code&gt; file and I'm good to go.&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;&amp;#40;defproject itq &amp;quot;0.1.0-SNAPSHOT&amp;quot;
+
+  :dependencies &amp;#91;&amp;#91;com.github.bdesham/clj-plist &amp;quot;0.9.1&amp;quot;&amp;#93;&amp;#93;&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this case I know I'm going to want to save some of what I do in the REPL. So, I start by creating a file to hold a namespace of things that I'll create while exploring the iTunes data. Then I can define things in the file editor and evaluate them in the REPL. A glance at the &lt;code&gt;clj-plist&lt;/code&gt; docs and I know how to turn a plist file into Clojure data structures. So, after copying the iTunes library I want to use into the project, I start with these forms in a file that I evaluate in the REPL.&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;&amp;#40;ns itq.parse
+  &amp;#40;:require &amp;#91;com.github.bdesham.clj-plist :as pl&amp;#93;&amp;#41;
+  &amp;#40;:import &amp;#91;java.io File&amp;#93;&amp;#41;&amp;#41;
+
+&amp;#40;def itl
+  &amp;#40;pl/parse-plist
+    &amp;#40;File. &amp;quot;&amp;lt;path-to-project&amp;gt;/itq/iTunes Music Library.xml&amp;quot;&amp;#41;&amp;#41;&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then, place the REPL in the &lt;code&gt;itq.parse&lt;/code&gt; namespace.&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;&amp;#40;in-ns 'itq.parse&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In theory, &lt;code&gt;itl&lt;/code&gt; has my iTunes library as a Clojure data structure. Finally (well, it really hasn't been that long), I can look at it. So, I type in the REPL&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;itl
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;But before hitting return I start thinking &lt;i&gt;... I have a pretty big iTunes library ... I've been here before ... the REPL is going to take a while as it prints out my library data ... and I'm not really going to learn much of anything ... I better check what it is and how big it is ...&lt;/i&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;&amp;#40;class itl&amp;#41;
+=&amp;gt; clojure.lang.PersistentHashMap
+&amp;#40;count itl&amp;#41;
+=&amp;gt; 10
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;i&gt;Hmmm, only 10 keys, what are they?&lt;/i&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;&amp;#40;keys itl&amp;#41;
+=&amp;gt;
+&amp;#40;&amp;quot;Major Version&amp;quot;
+ &amp;quot;Show Content Ratings&amp;quot;
+ &amp;quot;Playlists&amp;quot;
+ &amp;quot;Music Folder&amp;quot;
+ &amp;quot;Minor Version&amp;quot;
+ &amp;quot;Date&amp;quot;
+ &amp;quot;Tracks&amp;quot;
+ &amp;quot;Application Version&amp;quot;
+ &amp;quot;Library Persistent ID&amp;quot;
+ &amp;quot;Features&amp;quot;&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;&amp;quot;Tracks&amp;quot;&lt;/code&gt; sounds promising but there's some large collections in there somewhere. Easy enough to see what I'm dealing with, so ...&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;&amp;#40;into {} 
+      &amp;#40;map
+        &amp;#40;fn &amp;#91;&amp;#91;k v&amp;#93;&amp;#93; &amp;#91;k &amp;#91;&amp;#40;class v&amp;#41; &amp;#40;if &amp;#40;coll? v&amp;#41; &amp;#40;str &amp;#40;count v&amp;#41; &amp;quot; items&amp;quot;&amp;#41; v&amp;#41;&amp;#93;&amp;#93;&amp;#41;
+        itl&amp;#41;&amp;#41;
+=&amp;gt;
+{&amp;quot;Major Version&amp;quot; &amp;#91;java.lang.Long 1&amp;#93;,
+ &amp;quot;Show Content Ratings&amp;quot; &amp;#91;java.lang.Boolean true&amp;#93;,
+ &amp;quot;Playlists&amp;quot; &amp;#91;clojure.lang.PersistentVector &amp;quot;195 items&amp;quot;&amp;#93;,
+ &amp;quot;Music Folder&amp;quot; &amp;#91;java.lang.String &amp;quot;file:///Volumes/mediaHD/iTunes/iTunes%20Media/&amp;quot;&amp;#93;,
+ &amp;quot;Minor Version&amp;quot; &amp;#91;java.lang.Long 1&amp;#93;,
+ &amp;quot;Date&amp;quot; &amp;#91;org.joda.time.DateTime #object&amp;#91;org.joda.time.DateTime 0x3d37e74a &amp;quot;2015-10-27T19:44:01.000-05:00&amp;quot;&amp;#93;&amp;#93;,
+ &amp;quot;Tracks&amp;quot; &amp;#91;clojure.lang.PersistentHashMap &amp;quot;23177 items&amp;quot;&amp;#93;,
+ &amp;quot;Application Version&amp;quot; &amp;#91;java.lang.String &amp;quot;12.3.1.23&amp;quot;&amp;#93;,
+ &amp;quot;Library Persistent ID&amp;quot; &amp;#91;java.lang.String &amp;quot;88ABD0BA83F503C5&amp;quot;&amp;#93;,
+ &amp;quot;Features&amp;quot; &amp;#91;java.lang.Long 5&amp;#93;}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Yep, a lot of tracks. I should say that what I'm eventually going to want to do is read in my artist, album, and track information into a &lt;a href='http://www.datomic.com'&gt;Datomic&lt;/a&gt; database so I can play with the data even more. To do that I want to know how the data is organized in this file. It looks like it's all in that large &lt;code&gt;&amp;quot;Tracks&amp;quot;&lt;/code&gt; map.&lt;/p&gt;&lt;p&gt;I could continue this process of cautiously peeking into the structures to get an idea of their size before fully looking at or a part of it.&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;&amp;#40;def tracks &amp;#40;itl &amp;quot;Tracks&amp;quot;&amp;#41;&amp;#41;
+=&amp;gt; #'itq.parse/tracks
+
+&amp;#40;let &amp;#91;&amp;#91;&amp;#91;tk tv&amp;#93;&amp;#93; &amp;#40;take 1 tracks&amp;#41;&amp;#93;
+  &amp;#91;&amp;#40;class tk&amp;#41; &amp;#40;class tv&amp;#41;&amp;#93;&amp;#41;
+=&amp;gt; &amp;#91;java.lang.String clojure.lang.PersistentHashMap&amp;#93;
+
+&amp;#40;let &amp;#91;&amp;#91;&amp;#91;tk tv&amp;#93;&amp;#93; &amp;#40;take 1 tracks&amp;#41;&amp;#93;
+  &amp;#91;&amp;#40;class tk&amp;#41; &amp;#40;count tv&amp;#41;&amp;#93;&amp;#41;
+=&amp;gt; &amp;#91;java.lang.String 27&amp;#93;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ok, 27 keys is not too bad but I don't know what the values are and this is getting a little tedious. I should be able to write some functions to help speed this up. After a little playing (right in the REPL) I come up with this.&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;&amp;#40;declare explore-map&amp;#41;
+&amp;#40;declare explore-vector&amp;#41;
+&amp;#40;defn explore
+  &amp;quot;Safely explore possibly large map/vector structures in the repl.
+   mv - map, vector
+   threshold - if count is under threshold, recursively explore
+   peekn - if over threshold, recursivley explore peekn entries
+           and summarize the rest&amp;quot;
+  &amp;#91;mv threshold peekn&amp;#93;
+  &amp;#40;cond
+    &amp;#40;map? mv&amp;#41; &amp;#40;explore-map mv threshold peekn&amp;#41;
+    &amp;#40;vector? mv&amp;#41; &amp;#40;explore-vector mv threshold peekn&amp;#41;
+    :else mv&amp;#41;&amp;#41;
+
+&amp;#40;declare big-map&amp;#41;
+&amp;#40;defn explore-map
+  &amp;#91;m t p&amp;#93;
+  &amp;#40;if &amp;#40;&amp;lt; &amp;#40;count m&amp;#41; t&amp;#41;
+    &amp;#40;into {} &amp;#40;map &amp;#40;fn &amp;#91;&amp;#91;key val&amp;#93;&amp;#93; &amp;#91;key &amp;#40;explore val t p&amp;#41;&amp;#93;&amp;#41; m&amp;#41;&amp;#41;
+    &amp;#40;big-map m t p&amp;#41;&amp;#41;&amp;#41;
+
+&amp;#40;defn big-map
+  &amp;#91;m t p&amp;#93;
+  &amp;#40;let &amp;#91;peeked &amp;#40;take p m&amp;#41;
+        rest &amp;#40;drop p m&amp;#41;
+        more &amp;#40;str &amp;#40;count rest&amp;#41; &amp;quot; more entries&amp;quot;&amp;#41;&amp;#93;
+    &amp;#40;assoc &amp;#40;into {}
+                 &amp;#40;map &amp;#40;fn &amp;#91;&amp;#91;key val&amp;#93;&amp;#93; &amp;#91;key &amp;#40;explore val t p&amp;#41;&amp;#93;&amp;#41; peeked&amp;#41;&amp;#41;
+      :more more&amp;#41;&amp;#41;&amp;#41;
+
+&amp;#40;declare big-vector&amp;#41;
+&amp;#40;defn explore-vector
+  &amp;#91;v t p&amp;#93;
+  &amp;#40;if &amp;#40;&amp;lt; &amp;#40;count v&amp;#41; t&amp;#41;
+    &amp;#40;into &amp;#91;&amp;#93; &amp;#40;map &amp;#40;fn &amp;#91;e&amp;#93; &amp;#40;explore e t p&amp;#41;&amp;#41; v&amp;#41;&amp;#41;
+    &amp;#40;big-vector v t p&amp;#41;&amp;#41;&amp;#41;
+
+&amp;#40;defn big-vector
+  &amp;#91;v t p&amp;#93;
+  &amp;#40;let &amp;#91;peeked &amp;#40;take p v&amp;#41;
+        rest &amp;#40;drop p v&amp;#41;
+        more &amp;#40;str &amp;#40;count rest&amp;#41; &amp;quot; more entries&amp;quot;&amp;#41;&amp;#93;
+    &amp;#40;conj &amp;#40;mapv &amp;#40;fn &amp;#91;e&amp;#93; &amp;#40;explore e t p&amp;#41;&amp;#41; peeked&amp;#41;
+          more&amp;#41;&amp;#41;&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I'll let the appropriate function look inside of the structure and if the size is under a threshold I'll show it all, otherwise I'll only show a part of it.&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;&amp;#40;explore tracks 10 1&amp;#41;
+=&amp;gt; {&amp;quot;30645&amp;quot; {&amp;quot;Library Folder Count&amp;quot; 1, :more &amp;quot;26 more entries&amp;quot;}, :more &amp;quot;23176 more entries&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Oh yeah, I already know there are 27 keys in that map.&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;&amp;#40;explore tracks 28 1&amp;#41;
+=&amp;gt;
+{&amp;quot;30645&amp;quot; {&amp;quot;Library Folder Count&amp;quot; 1,
+          &amp;quot;Disc Number&amp;quot; 1,
+          &amp;quot;Total Time&amp;quot; 332066,
+          &amp;quot;Disc Count&amp;quot; 1,
+          &amp;quot;Equalizer&amp;quot; &amp;quot;Rock&amp;quot;,
+          &amp;quot;Persistent ID&amp;quot; &amp;quot;5B219C7E2973CDCE&amp;quot;,
+          &amp;quot;Artist&amp;quot; &amp;quot;Joe Louis Walker&amp;quot;,
+          &amp;quot;Album&amp;quot; &amp;quot;Live At Slim's Volume 1&amp;quot;,
+          &amp;quot;Play Date&amp;quot; 3428123742,
+          &amp;quot;Location&amp;quot; &amp;quot;file:///Volumes/mediaHD/iTunes/iTunes%20Media/Music/Joe%20Louis%20Walker/Live%20At%20Slim's%20Volume%201/03%20Don't%20Play%20Games.m4a&amp;quot;,
+          &amp;quot;Track ID&amp;quot; 30645,
+          &amp;quot;Track Count&amp;quot; 10,
+          &amp;quot;Track Number&amp;quot; 3,
+          &amp;quot;Date Modified&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x592ec0f3 &amp;quot;2011-07-03T17:03:17.000-05:00&amp;quot;&amp;#93;,
+          &amp;quot;Bit Rate&amp;quot; 675,
+          &amp;quot;Size&amp;quot; 28068234,
+          &amp;quot;Date Added&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x79eae4d &amp;quot;2011-07-03T17:02:51.000-05:00&amp;quot;&amp;#93;,
+          &amp;quot;Play Count&amp;quot; 1,
+          &amp;quot;Year&amp;quot; 2008,
+          &amp;quot;File Type&amp;quot; 1295270176,
+          &amp;quot;Track Type&amp;quot; &amp;quot;File&amp;quot;,
+          &amp;quot;Name&amp;quot; &amp;quot;Don't Play Games&amp;quot;,
+          &amp;quot;Sample Rate&amp;quot; 44100,
+          &amp;quot;Genre&amp;quot; &amp;quot;Blues&amp;quot;,
+          &amp;quot;Play Date UTC&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x5b14aca &amp;quot;2012-08-18T08:35:42.000-05:00&amp;quot;&amp;#93;,
+          &amp;quot;File Folder Count&amp;quot; 5,
+          &amp;quot;Kind&amp;quot; &amp;quot;Apple Lossless audio file&amp;quot;},
+ :more &amp;quot;23176 more entries&amp;quot;}
+
+ &amp;#40;explore tracks 28 3&amp;#41;
+ =&amp;gt;
+ {&amp;quot;30645&amp;quot; {&amp;quot;Library Folder Count&amp;quot; 1,
+           &amp;quot;Disc Number&amp;quot; 1,
+           &amp;quot;Total Time&amp;quot; 332066,
+           &amp;quot;Disc Count&amp;quot; 1,
+           &amp;quot;Equalizer&amp;quot; &amp;quot;Rock&amp;quot;,
+           &amp;quot;Persistent ID&amp;quot; &amp;quot;5B219C7E2973CDCE&amp;quot;,
+           &amp;quot;Artist&amp;quot; &amp;quot;Joe Louis Walker&amp;quot;,
+           &amp;quot;Album&amp;quot; &amp;quot;Live At Slim's Volume 1&amp;quot;,
+           &amp;quot;Play Date&amp;quot; 3428123742,
+           &amp;quot;Location&amp;quot; &amp;quot;file:///Volumes/mediaHD/iTunes/iTunes%20Media/Music/Joe%20Louis%20Walker/Live%20At%20Slim's%20Volume%201/03%20Don't%20Play%20Games.m4a&amp;quot;,
+           &amp;quot;Track ID&amp;quot; 30645,
+           &amp;quot;Track Count&amp;quot; 10,
+           &amp;quot;Track Number&amp;quot; 3,
+           &amp;quot;Date Modified&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x592ec0f3 &amp;quot;2011-07-03T17:03:17.000-05:00&amp;quot;&amp;#93;,
+           &amp;quot;Bit Rate&amp;quot; 675,
+           &amp;quot;Size&amp;quot; 28068234,
+           &amp;quot;Date Added&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x79eae4d &amp;quot;2011-07-03T17:02:51.000-05:00&amp;quot;&amp;#93;,
+           &amp;quot;Play Count&amp;quot; 1,
+           &amp;quot;Year&amp;quot; 2008,
+           &amp;quot;File Type&amp;quot; 1295270176,
+           &amp;quot;Track Type&amp;quot; &amp;quot;File&amp;quot;,
+           &amp;quot;Name&amp;quot; &amp;quot;Don't Play Games&amp;quot;,
+           &amp;quot;Sample Rate&amp;quot; 44100,
+           &amp;quot;Genre&amp;quot; &amp;quot;Blues&amp;quot;,
+           &amp;quot;Play Date UTC&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x5b14aca &amp;quot;2012-08-18T08:35:42.000-05:00&amp;quot;&amp;#93;,
+           &amp;quot;File Folder Count&amp;quot; 5,
+           &amp;quot;Kind&amp;quot; &amp;quot;Apple Lossless audio file&amp;quot;},
+  &amp;quot;43515&amp;quot; {&amp;quot;Library Folder Count&amp;quot; 1,
+           &amp;quot;Total Time&amp;quot; 3539200,
+           &amp;quot;Persistent ID&amp;quot; &amp;quot;4208E480BB2E44CC&amp;quot;,
+           &amp;quot;Comments&amp;quot; &amp;quot;Long before being recognized as an outstanding interviewer and talk show host, Dick Cavett started his career as a performer by doing magic.  On this episode of The Spirit of Magic podcast, Mr. Cavett talks about his lifelong passion for magic, his apprec&amp;quot;,
+           &amp;quot;Artist&amp;quot; &amp;quot;Dodd Vickers&amp;quot;,
+           &amp;quot;Album&amp;quot; &amp;quot;The Magic Newswire&amp;quot;,
+           &amp;quot;Play Date&amp;quot; 3475728561,
+           &amp;quot;Location&amp;quot; &amp;quot;file:///Volumes/mediaHD/iTunes/iTunes%20Media/Podcasts/The%20Magic%20Newswire/MNW%20%23195%20&amp;#95;&amp;#95;%20DICK%20CAVETT.mp3&amp;quot;,
+           &amp;quot;Composer&amp;quot; &amp;quot;Wizard &amp;amp; The Vegas Showgirl&amp;quot;,
+           &amp;quot;Track ID&amp;quot; 43515,
+           &amp;quot;Date Modified&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x6de8524d &amp;quot;2013-09-16T09:39:16.000-05:00&amp;quot;&amp;#93;,
+           &amp;quot;Sort Album&amp;quot; &amp;quot;Magic Newswire&amp;quot;,
+           &amp;quot;Bit Rate&amp;quot; 128,
+           &amp;quot;Size&amp;quot; 56898510,
+           &amp;quot;Date Added&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x68dc8150 &amp;quot;2013-09-16T09:39:16.000-05:00&amp;quot;&amp;#93;,
+           &amp;quot;Artwork Count&amp;quot; 1,
+           &amp;quot;Release Date&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x7d16387d &amp;quot;2010-06-22T11:27:40.000-05:00&amp;quot;&amp;#93;,
+           &amp;quot;Play Count&amp;quot; 1,
+           &amp;quot;Year&amp;quot; 2010,
+           &amp;quot;Track Type&amp;quot; &amp;quot;File&amp;quot;,
+           &amp;quot;Name&amp;quot; &amp;quot;MNW #195 :: DICK CAVETT&amp;quot;,
+           &amp;quot;Sample Rate&amp;quot; 44100,
+           &amp;quot;Genre&amp;quot; &amp;quot;Podcast&amp;quot;,
+           &amp;quot;Play Date UTC&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x213534ce &amp;quot;2014-02-20T08:09:21.000-06:00&amp;quot;&amp;#93;,
+           &amp;quot;File Folder Count&amp;quot; 4,
+           &amp;quot;Podcast&amp;quot; true,
+           &amp;quot;Kind&amp;quot; &amp;quot;MPEG audio file&amp;quot;},
+  &amp;quot;9333&amp;quot; {&amp;quot;Library Folder Count&amp;quot; 1,
+          &amp;quot;Disc Number&amp;quot; 1,
+          &amp;quot;Total Time&amp;quot; 307400,
+          &amp;quot;Disc Count&amp;quot; 1,
+          &amp;quot;Persistent ID&amp;quot; &amp;quot;941D2F3691078CC6&amp;quot;,
+          &amp;quot;Artist&amp;quot; &amp;quot;Israel Kamakawiwo'ole&amp;quot;,
+          &amp;quot;Play Date&amp;quot; 3279050530,
+          &amp;quot;Location&amp;quot; &amp;quot;file:///Volumes/mediaHD/iTunes/iTunes%20Media/Music/Israel%20Kamakawiwo'ole/Unknown%20Album/01%20Somewhere%20Over%20The%20Rainbow%20-%20What%20a%20Wonderful%20World.m4a&amp;quot;,
+          &amp;quot;Track ID&amp;quot; 9333,
+          &amp;quot;Track Count&amp;quot; 1,
+          &amp;quot;Track Number&amp;quot; 1,
+          &amp;quot;Date Modified&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x5c4f6611 &amp;quot;2007-11-27T22:14:19.000-06:00&amp;quot;&amp;#93;,
+          &amp;quot;Bit Rate&amp;quot; 248,
+          &amp;quot;Size&amp;quot; 9619241,
+          &amp;quot;Date Added&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x56117e25 &amp;quot;2007-11-27T22:13:27.000-06:00&amp;quot;&amp;#93;,
+          &amp;quot;Play Count&amp;quot; 1,
+          &amp;quot;File Type&amp;quot; 1295270176,
+          &amp;quot;Track Type&amp;quot; &amp;quot;File&amp;quot;,
+          &amp;quot;Name&amp;quot; &amp;quot;Somewhere Over The Rainbow - What a Wonderful World&amp;quot;,
+          &amp;quot;Sample Rate&amp;quot; 44100,
+          &amp;quot;Play Date UTC&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x4ef3ca4c &amp;quot;2007-11-27T23:22:10.000-06:00&amp;quot;&amp;#93;,
+          &amp;quot;File Folder Count&amp;quot; 5,
+          &amp;quot;Kind&amp;quot; &amp;quot;AAC audio file&amp;quot;},
+  :more &amp;quot;23174 more entries&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It's track info keyed on the &lt;code&gt;&amp;quot;Track ID&amp;quot;&lt;/code&gt;. I'll probably just want the tracks in a flat collection. Also, It looks like there's some variation between track map keys. This kind of thing makes me curious (well, more curious). I wonder what is the maximum set of track keys across all of the tracks? Also, what is the full set of keys ever used? Should just be a function away. Actually, let's make it a few functions and flatten down the track info while we're at it.&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;&amp;#40;def tracks &amp;#40;into &amp;#91;&amp;#93; &amp;#40;vals &amp;#40;itl &amp;quot;Tracks&amp;quot;&amp;#41;&amp;#41;&amp;#41;&amp;#41;
+=&amp;gt; #'itq.parse/tracks
+
+&amp;#40;defn track-keys-count
+  &amp;#91;tracks&amp;#93;
+  &amp;#40;reduce &amp;#40;fn &amp;#91;ks m&amp;#93;
+            &amp;#40;into ks
+                  &amp;#40;map #&amp;#40;vector % &amp;#40;inc &amp;#40;get ks % 0&amp;#41;&amp;#41;&amp;#41;
+                       &amp;#40;keys m&amp;#41;&amp;#41;&amp;#41;&amp;#41;
+          {}
+          tracks&amp;#41;&amp;#41;
+=&amp;gt; #'itq.parse/track-keys-count
+
+&amp;#40;sort &amp;#40;track-keys-count tracks&amp;#41;&amp;#41;
+=&amp;gt;
+&amp;#40;&amp;#91;&amp;quot;Album&amp;quot; 22680&amp;#93;
+ &amp;#91;&amp;quot;Album Artist&amp;quot; 2287&amp;#93;
+ &amp;#91;&amp;quot;Album Rating&amp;quot; 45&amp;#93;
+ &amp;#91;&amp;quot;Album Rating Computed&amp;quot; 34&amp;#93;
+ &amp;#91;&amp;quot;Artist&amp;quot; 22192&amp;#93;
+ &amp;#91;&amp;quot;Artwork Count&amp;quot; 9654&amp;#93;
+ &amp;#91;&amp;quot;BPM&amp;quot; 115&amp;#93;
+ &amp;#91;&amp;quot;Bit Rate&amp;quot; 19606&amp;#93;
+ &amp;#91;&amp;quot;Clean&amp;quot; 100&amp;#93;
+ &amp;#91;&amp;quot;Comments&amp;quot; 2761&amp;#93;
+ &amp;#91;&amp;quot;Compilation&amp;quot; 646&amp;#93;
+ &amp;#91;&amp;quot;Composer&amp;quot; 11805&amp;#93;
+ &amp;#91;&amp;quot;Content Rating&amp;quot; 546&amp;#93;
+ &amp;#91;&amp;quot;Date Added&amp;quot; 23177&amp;#93;
+ &amp;#91;&amp;quot;Date Modified&amp;quot; 20892&amp;#93;
+ &amp;#91;&amp;quot;Disabled&amp;quot; 1&amp;#93;
+ &amp;#91;&amp;quot;Disc Count&amp;quot; 13776&amp;#93;
+ &amp;#91;&amp;quot;Disc Number&amp;quot; 14445&amp;#93;
+ &amp;#91;&amp;quot;Episode&amp;quot; 312&amp;#93;
+ &amp;#91;&amp;quot;Episode Order&amp;quot; 167&amp;#93;
+ &amp;#91;&amp;quot;Equalizer&amp;quot; 14859&amp;#93;
+ &amp;#91;&amp;quot;Explicit&amp;quot; 69&amp;#93;
+ &amp;#91;&amp;quot;File Folder Count&amp;quot; 19635&amp;#93;
+ &amp;#91;&amp;quot;File Type&amp;quot; 14792&amp;#93;
+ &amp;#91;&amp;quot;Genre&amp;quot; 22710&amp;#93;
+ &amp;#91;&amp;quot;Grouping&amp;quot; 542&amp;#93;
+ &amp;#91;&amp;quot;Has Video&amp;quot; 1864&amp;#93;
+ &amp;#91;&amp;quot;Kind&amp;quot; 21354&amp;#93;
+ &amp;#91;&amp;quot;Library Folder Count&amp;quot; 19635&amp;#93;
+ &amp;#91;&amp;quot;Location&amp;quot; 22632&amp;#93;
+ &amp;#91;&amp;quot;Loved&amp;quot; 2&amp;#93;
+ &amp;#91;&amp;quot;Movie&amp;quot; 1509&amp;#93;
+ &amp;#91;&amp;quot;Music Video&amp;quot; 3&amp;#93;
+ &amp;#91;&amp;quot;Name&amp;quot; 23177&amp;#93;
+ &amp;#91;&amp;quot;Part Of Gapless Album&amp;quot; 195&amp;#93;
+ &amp;#91;&amp;quot;Persistent ID&amp;quot; 23177&amp;#93;
+ &amp;#91;&amp;quot;Play Count&amp;quot; 11997&amp;#93;
+ &amp;#91;&amp;quot;Play Date&amp;quot; 11191&amp;#93;
+ &amp;#91;&amp;quot;Play Date UTC&amp;quot; 11191&amp;#93;
+ &amp;#91;&amp;quot;Podcast&amp;quot; 3131&amp;#93;
+ &amp;#91;&amp;quot;Protected&amp;quot; 633&amp;#93;
+ &amp;#91;&amp;quot;Purchased&amp;quot; 1287&amp;#93;
+ &amp;#91;&amp;quot;Rating&amp;quot; 45&amp;#93;
+ &amp;#91;&amp;quot;Rating Computed&amp;quot; 41&amp;#93;
+ &amp;#91;&amp;quot;Release Date&amp;quot; 6625&amp;#93;
+ &amp;#91;&amp;quot;Sample Rate&amp;quot; 18498&amp;#93;
+ &amp;#91;&amp;quot;Season&amp;quot; 61&amp;#93;
+ &amp;#91;&amp;quot;Series&amp;quot; 318&amp;#93;
+ &amp;#91;&amp;quot;Size&amp;quot; 21973&amp;#93;
+ &amp;#91;&amp;quot;Skip Count&amp;quot; 1677&amp;#93;
+ &amp;#91;&amp;quot;Skip Date&amp;quot; 1638&amp;#93;
+ &amp;#91;&amp;quot;Sort Album&amp;quot; 3142&amp;#93;
+ &amp;#91;&amp;quot;Sort Album Artist&amp;quot; 182&amp;#93;
+ &amp;#91;&amp;quot;Sort Artist&amp;quot; 2062&amp;#93;
+ &amp;#91;&amp;quot;Sort Composer&amp;quot; 75&amp;#93;
+ &amp;#91;&amp;quot;Sort Name&amp;quot; 1411&amp;#93;
+ &amp;#91;&amp;quot;Sort Series&amp;quot; 21&amp;#93;
+ &amp;#91;&amp;quot;Stop Time&amp;quot; 1&amp;#93;
+ &amp;#91;&amp;quot;TV Show&amp;quot; 306&amp;#93;
+ &amp;#91;&amp;quot;Total Time&amp;quot; 21323&amp;#93;
+ &amp;#91;&amp;quot;Track Count&amp;quot; 15762&amp;#93;
+ &amp;#91;&amp;quot;Track ID&amp;quot; 23177&amp;#93;
+ &amp;#91;&amp;quot;Track Number&amp;quot; 16968&amp;#93;
+ &amp;#91;&amp;quot;Track Type&amp;quot; 23177&amp;#93;
+ &amp;#91;&amp;quot;Unplayed&amp;quot; 3287&amp;#93;
+ &amp;#91;&amp;quot;Volume Adjustment&amp;quot; 5&amp;#93;
+ &amp;#91;&amp;quot;Year&amp;quot; 18734&amp;#93;
+ &amp;#91;&amp;quot;iTunesU&amp;quot; 2535&amp;#93;&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That's the full set of keys and how many times each is used. I would like to know the type of values behind each key, and make sure we're done with colletions.&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;&amp;#40;defn track-keys-class
+  &amp;#91;tracks&amp;#93;
+  &amp;#40;reduce &amp;#40;fn &amp;#91;ks m&amp;#93;
+            &amp;#40;into ks
+                  &amp;#40;map #&amp;#40;vector % &amp;#40;class &amp;#40;get m %&amp;#41;&amp;#41;&amp;#41;
+                       &amp;#40;keys m&amp;#41;&amp;#41;&amp;#41;&amp;#41;
+          {}
+          tracks&amp;#41;&amp;#41;
+=&amp;gt; #'itq.parse/track-keys-class
+
+&amp;#40;sort &amp;#40;track-keys-class tracks&amp;#41;&amp;#41;
+=&amp;gt;
+&amp;#40;&amp;#91;&amp;quot;Album&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Album Artist&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Album Rating&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Album Rating Computed&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Artist&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Artwork Count&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;BPM&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Bit Rate&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Clean&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Comments&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Compilation&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Composer&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Content Rating&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Date Added&amp;quot; org.joda.time.DateTime&amp;#93;
+ &amp;#91;&amp;quot;Date Modified&amp;quot; org.joda.time.DateTime&amp;#93;
+ &amp;#91;&amp;quot;Disabled&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Disc Count&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Disc Number&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Episode&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Episode Order&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Equalizer&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Explicit&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;File Folder Count&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;File Type&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Genre&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Grouping&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Has Video&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Kind&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Library Folder Count&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Location&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Loved&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Movie&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Music Video&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Name&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Part Of Gapless Album&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Persistent ID&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Play Count&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Play Date&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Play Date UTC&amp;quot; org.joda.time.DateTime&amp;#93;
+ &amp;#91;&amp;quot;Podcast&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Protected&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Purchased&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Rating&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Rating Computed&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Release Date&amp;quot; org.joda.time.DateTime&amp;#93;
+ &amp;#91;&amp;quot;Sample Rate&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Season&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Series&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Size&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Skip Count&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Skip Date&amp;quot; org.joda.time.DateTime&amp;#93;
+ &amp;#91;&amp;quot;Sort Album&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Sort Album Artist&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Sort Artist&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Sort Composer&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Sort Name&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Sort Series&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Stop Time&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;TV Show&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Total Time&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Track Count&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Track ID&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Track Number&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Track Type&amp;quot; java.lang.String&amp;#93;
+ &amp;#91;&amp;quot;Unplayed&amp;quot; java.lang.Boolean&amp;#93;
+ &amp;#91;&amp;quot;Volume Adjustment&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;Year&amp;quot; java.lang.Long&amp;#93;
+ &amp;#91;&amp;quot;iTunesU&amp;quot; java.lang.Boolean&amp;#93;&amp;#41;
+
+&amp;#40;defn track-keys-info
+  &amp;#91;tracks&amp;#93;
+  &amp;#40;let &amp;#91;counts &amp;#40;track-keys-count tracks&amp;#41;
+        classes &amp;#40;track-keys-class tracks&amp;#41;&amp;#93;
+    &amp;#40;merge-with vector classes counts&amp;#41;&amp;#41;&amp;#41;
+=&amp;gt; #'itq.parse/track-keys-info
+
+&amp;#40;sort &amp;#40;track-keys-info tracks&amp;#41;&amp;#41;
+=&amp;gt;
+&amp;#40;&amp;#91;&amp;quot;Album&amp;quot; &amp;#91;java.lang.String 22680&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Album Artist&amp;quot; &amp;#91;java.lang.String 2287&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Album Rating&amp;quot; &amp;#91;java.lang.Long 45&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Album Rating Computed&amp;quot; &amp;#91;java.lang.Boolean 34&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Artist&amp;quot; &amp;#91;java.lang.String 22192&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Artwork Count&amp;quot; &amp;#91;java.lang.Long 9654&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;BPM&amp;quot; &amp;#91;java.lang.Long 115&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Bit Rate&amp;quot; &amp;#91;java.lang.Long 19606&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Clean&amp;quot; &amp;#91;java.lang.Boolean 100&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Comments&amp;quot; &amp;#91;java.lang.String 2761&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Compilation&amp;quot; &amp;#91;java.lang.Boolean 646&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Composer&amp;quot; &amp;#91;java.lang.String 11805&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Content Rating&amp;quot; &amp;#91;java.lang.String 546&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Date Added&amp;quot; &amp;#91;org.joda.time.DateTime 23177&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Date Modified&amp;quot; &amp;#91;org.joda.time.DateTime 20892&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Disabled&amp;quot; &amp;#91;java.lang.Boolean 1&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Disc Count&amp;quot; &amp;#91;java.lang.Long 13776&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Disc Number&amp;quot; &amp;#91;java.lang.Long 14445&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Episode&amp;quot; &amp;#91;java.lang.String 312&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Episode Order&amp;quot; &amp;#91;java.lang.Long 167&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Equalizer&amp;quot; &amp;#91;java.lang.String 14859&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Explicit&amp;quot; &amp;#91;java.lang.Boolean 69&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;File Folder Count&amp;quot; &amp;#91;java.lang.Long 19635&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;File Type&amp;quot; &amp;#91;java.lang.Long 14792&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Genre&amp;quot; &amp;#91;java.lang.String 22710&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Grouping&amp;quot; &amp;#91;java.lang.String 542&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Has Video&amp;quot; &amp;#91;java.lang.Boolean 1864&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Kind&amp;quot; &amp;#91;java.lang.String 21354&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Library Folder Count&amp;quot; &amp;#91;java.lang.Long 19635&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Location&amp;quot; &amp;#91;java.lang.String 22632&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Loved&amp;quot; &amp;#91;java.lang.Boolean 2&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Movie&amp;quot; &amp;#91;java.lang.Boolean 1509&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Music Video&amp;quot; &amp;#91;java.lang.Boolean 3&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Name&amp;quot; &amp;#91;java.lang.String 23177&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Part Of Gapless Album&amp;quot; &amp;#91;java.lang.Boolean 195&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Persistent ID&amp;quot; &amp;#91;java.lang.String 23177&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Play Count&amp;quot; &amp;#91;java.lang.Long 11997&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Play Date&amp;quot; &amp;#91;java.lang.Long 11191&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Play Date UTC&amp;quot; &amp;#91;org.joda.time.DateTime 11191&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Podcast&amp;quot; &amp;#91;java.lang.Boolean 3131&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Protected&amp;quot; &amp;#91;java.lang.Boolean 633&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Purchased&amp;quot; &amp;#91;java.lang.Boolean 1287&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Rating&amp;quot; &amp;#91;java.lang.Long 45&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Rating Computed&amp;quot; &amp;#91;java.lang.Boolean 41&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Release Date&amp;quot; &amp;#91;org.joda.time.DateTime 6625&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Sample Rate&amp;quot; &amp;#91;java.lang.Long 18498&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Season&amp;quot; &amp;#91;java.lang.Long 61&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Series&amp;quot; &amp;#91;java.lang.String 318&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Size&amp;quot; &amp;#91;java.lang.Long 21973&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Skip Count&amp;quot; &amp;#91;java.lang.Long 1677&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Skip Date&amp;quot; &amp;#91;org.joda.time.DateTime 1638&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Sort Album&amp;quot; &amp;#91;java.lang.String 3142&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Sort Album Artist&amp;quot; &amp;#91;java.lang.String 182&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Sort Artist&amp;quot; &amp;#91;java.lang.String 2062&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Sort Composer&amp;quot; &amp;#91;java.lang.String 75&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Sort Name&amp;quot; &amp;#91;java.lang.String 1411&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Sort Series&amp;quot; &amp;#91;java.lang.String 21&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Stop Time&amp;quot; &amp;#91;java.lang.Long 1&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;TV Show&amp;quot; &amp;#91;java.lang.Boolean 306&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Total Time&amp;quot; &amp;#91;java.lang.Long 21323&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Track Count&amp;quot; &amp;#91;java.lang.Long 15762&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Track ID&amp;quot; &amp;#91;java.lang.Long 23177&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Track Number&amp;quot; &amp;#91;java.lang.Long 16968&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Track Type&amp;quot; &amp;#91;java.lang.String 23177&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Unplayed&amp;quot; &amp;#91;java.lang.Boolean 3287&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Volume Adjustment&amp;quot; &amp;#91;java.lang.Long 5&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;Year&amp;quot; &amp;#91;java.lang.Long 18734&amp;#93;&amp;#93;
+ &amp;#91;&amp;quot;iTunesU&amp;quot; &amp;#91;java.lang.Boolean 2535&amp;#93;&amp;#93;&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Well, I'm happy with this for now. I have a good understanding of the data. I remember something about a &lt;code&gt;&amp;quot;Playlists&amp;quot;&lt;/code&gt; key so I better make sure that's nothing I care about. I'll just &lt;code&gt;explore&lt;/code&gt; from the top.&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;&amp;#40;explore itl 11 1&amp;#41;
+=&amp;gt;
+{&amp;quot;Major Version&amp;quot; 1,
+ &amp;quot;Show Content Ratings&amp;quot; true,
+ &amp;quot;Playlists&amp;quot; &amp;#91;{&amp;quot;Playlist Persistent ID&amp;quot; &amp;quot;7DFD01EA07FCC290&amp;quot;,
+               &amp;quot;All Items&amp;quot; true,
+               &amp;quot;Visible&amp;quot; false,
+               &amp;quot;Master&amp;quot; true,
+               &amp;quot;Playlist Items&amp;quot; &amp;#91;{&amp;quot;Track ID&amp;quot; 6085} &amp;quot;20311 more entries&amp;quot;&amp;#93;,
+               &amp;quot;Playlist ID&amp;quot; 82971,
+               &amp;quot;Name&amp;quot; &amp;quot;####!####&amp;quot;}
+              &amp;quot;194 more entries&amp;quot;&amp;#93;,
+ &amp;quot;Music Folder&amp;quot; &amp;quot;file:///Volumes/mediaHD/iTunes/iTunes%20Media/&amp;quot;,
+ &amp;quot;Minor Version&amp;quot; 1,
+ &amp;quot;Date&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x1b471e14 &amp;quot;2015-10-27T19:44:01.000-05:00&amp;quot;&amp;#93;,
+ &amp;quot;Tracks&amp;quot; {&amp;quot;30645&amp;quot; {&amp;quot;Library Folder Count&amp;quot; 1, :more &amp;quot;26 more entries&amp;quot;}, :more &amp;quot;23176 more entries&amp;quot;},
+ &amp;quot;Application Version&amp;quot; &amp;quot;12.3.1.23&amp;quot;,
+ &amp;quot;Library Persistent ID&amp;quot; &amp;quot;88ABD0BA83F503C5&amp;quot;,
+ &amp;quot;Features&amp;quot; 5}
+
+&amp;#40;explore itl 11 3&amp;#41;
+=&amp;gt;
+{&amp;quot;Major Version&amp;quot; 1,
+ &amp;quot;Show Content Ratings&amp;quot; true,
+ &amp;quot;Playlists&amp;quot; &amp;#91;{&amp;quot;Playlist Persistent ID&amp;quot; &amp;quot;7DFD01EA07FCC290&amp;quot;,
+               &amp;quot;All Items&amp;quot; true,
+               &amp;quot;Visible&amp;quot; false,
+               &amp;quot;Master&amp;quot; true,
+               &amp;quot;Playlist Items&amp;quot; &amp;#91;{&amp;quot;Track ID&amp;quot; 6085} {&amp;quot;Track ID&amp;quot; 6083} {&amp;quot;Track ID&amp;quot; 6091} &amp;quot;20309 more entries&amp;quot;&amp;#93;,
+               &amp;quot;Playlist ID&amp;quot; 82971,
+               &amp;quot;Name&amp;quot; &amp;quot;####!####&amp;quot;}
+              {&amp;quot;Playlist Persistent ID&amp;quot; &amp;quot;73F3C095D7F3E012&amp;quot;,
+               &amp;quot;Music&amp;quot; true,
+               &amp;quot;All Items&amp;quot; true,
+               &amp;quot;Smart Info&amp;quot; #object&amp;#91;&amp;quot;&amp;#91;B&amp;quot; 0x72669460 &amp;quot;&amp;#91;B@72669460&amp;quot;&amp;#93;,
+               &amp;quot;Distinguished Kind&amp;quot; 4,
+               &amp;quot;Smart Criteria&amp;quot; #object&amp;#91;&amp;quot;&amp;#91;B&amp;quot; 0x23eee98c &amp;quot;&amp;#91;B@23eee98c&amp;quot;&amp;#93;,
+               &amp;quot;Playlist Items&amp;quot; &amp;#91;{&amp;quot;Track ID&amp;quot; 8083} {&amp;quot;Track ID&amp;quot; 7031} {&amp;quot;Track ID&amp;quot; 5705} &amp;quot;15605 more entries&amp;quot;&amp;#93;,
+               &amp;quot;Playlist ID&amp;quot; 103282,
+               &amp;quot;Name&amp;quot; &amp;quot;Music&amp;quot;}
+              {&amp;quot;Playlist Persistent ID&amp;quot; &amp;quot;8BFA8F6E5F0B5084&amp;quot;,
+               &amp;quot;All Items&amp;quot; true,
+               &amp;quot;Smart Info&amp;quot; #object&amp;#91;&amp;quot;&amp;#91;B&amp;quot; 0x7a605286 &amp;quot;&amp;#91;B@7a605286&amp;quot;&amp;#93;,
+               &amp;quot;Distinguished Kind&amp;quot; 47,
+               &amp;quot;Smart Criteria&amp;quot; #object&amp;#91;&amp;quot;&amp;#91;B&amp;quot; 0x5f15adc4 &amp;quot;&amp;#91;B@5f15adc4&amp;quot;&amp;#93;,
+               &amp;quot;Playlist Items&amp;quot; &amp;#91;{&amp;quot;Track ID&amp;quot; 6697} {&amp;quot;Track ID&amp;quot; 6695} {&amp;quot;Track ID&amp;quot; 8293}&amp;#93;,
+               &amp;quot;Playlist ID&amp;quot; 118893,
+               &amp;quot;Name&amp;quot; &amp;quot;Music Videos&amp;quot;}
+              &amp;quot;192 more entries&amp;quot;&amp;#93;,
+ &amp;quot;Music Folder&amp;quot; &amp;quot;file:///Volumes/mediaHD/iTunes/iTunes%20Media/&amp;quot;,
+ &amp;quot;Minor Version&amp;quot; 1,
+ &amp;quot;Date&amp;quot; #object&amp;#91;org.joda.time.DateTime 0x1b471e14 &amp;quot;2015-10-27T19:44:01.000-05:00&amp;quot;&amp;#93;,
+ &amp;quot;Tracks&amp;quot; {&amp;quot;30645&amp;quot; {&amp;quot;Library Folder Count&amp;quot; 1, &amp;quot;Disc Number&amp;quot; 1, &amp;quot;Total Time&amp;quot; 332066, :more &amp;quot;24 more entries&amp;quot;},
+           &amp;quot;43515&amp;quot; {&amp;quot;Library Folder Count&amp;quot; 1,
+                    &amp;quot;Total Time&amp;quot; 3539200,
+                    &amp;quot;Persistent ID&amp;quot; &amp;quot;4208E480BB2E44CC&amp;quot;,
+                    :more &amp;quot;24 more entries&amp;quot;},
+           &amp;quot;9333&amp;quot; {&amp;quot;Library Folder Count&amp;quot; 1, &amp;quot;Disc Number&amp;quot; 1, &amp;quot;Total Time&amp;quot; 307400, :more &amp;quot;20 more entries&amp;quot;},
+           :more &amp;quot;23174 more entries&amp;quot;},
+ &amp;quot;Application Version&amp;quot; &amp;quot;12.3.1.23&amp;quot;,
+ &amp;quot;Library Persistent ID&amp;quot; &amp;quot;88ABD0BA83F503C5&amp;quot;,
+ &amp;quot;Features&amp;quot; 5}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A playlist looks like some info accompanying a list of track ids. None of which I care about right now.&lt;/p&gt;&lt;h2 id="leftovers"&gt;Leftovers&lt;/h2&gt;&lt;p&gt;I'm certain that I will someday do something similar with some other data so I want to save that &lt;code&gt;explore&lt;/code&gt; function to use later. I gathered up the definitions from my REPL history, added code for sets, sequences, and some tests. The project is on github at &lt;a href='https://github.com/hby/repl'&gt;https://github.com/hby/repl&lt;/a&gt;. Just pull the code down and follow the &lt;code&gt;README.md&lt;/code&gt; instructions.&lt;/p&gt;&lt;p&gt;It's not very hard to begin to put together a bunch of functions that you can use for exploration in any REPL.&lt;/p&gt;&lt;h2 id="tell&amp;#95;your&amp;#95;story"&gt;Tell your story&lt;/h2&gt;&lt;p&gt;If you're new to Clojure, or functional programming, or languages that have a REPL, I hope this encourages you to crack open a REPL and start to think about your own story. It's a means to whatever end you have in mind.&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt; “I knew when I met you an adventure was going to happen.”&lt;br&gt;   ― &lt;i&gt;A.A. Milne&lt;/i&gt; &lt;/p&gt;&lt;/blockquote&gt;&lt;h2 id="but&amp;#95;still,&amp;#95;don't&amp;#95;put&amp;#95;your&amp;#95;eye&amp;#95;out"&gt;But still, don't put your eye out&lt;/h2&gt;&lt;p&gt;&lt;code&gt;clojure.core&lt;/code&gt; defines the vars &lt;code&gt;&amp;#42;print-length&amp;#42;&lt;/code&gt; and &lt;code&gt;&amp;#42;print-level&amp;#42;&lt;/code&gt; that a REPL can use to limit its output. You can set a var in the REPL by&lt;/p&gt;&lt;pre&gt;&lt;code class="clojure"&gt;&amp;#40;set! &amp;#42;print-length&amp;#42; 25&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I have found that not all REPL environments honor this. Could be something I've done wrong, though.&lt;/p&gt;&lt;p&gt;[&lt;b&gt;UPDATE:&lt;/b&gt; I must have done something wrong, as I suspected. I went back to try this out and these settings are being honored. I've only tried them out in Cursive but have no reason to believe they don't work everywhere.]&lt;/p&gt;&lt;p&gt;But even if they do, I wanted more flexibility than they provide. However, they are good to know about and setting values for them does make a good safety measure in case you do stumble across some data that is larger than you thought.&lt;/p&gt;</description><pubDate>Sun, 29 Nov 2015 00:00:00 -0600</pubDate></item><item><guid>http://sprungcanary.net/posts-output/2015-06-15-ill-never-1/</guid><link>http://sprungcanary.net/posts-output/2015-06-15-ill-never-1/</link><title>I'll never ...</title><description>&lt;p&gt;&lt;b&gt;I'll never see my dad grow old.&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Sorry, I didn't mean to shock you or make you feel uncomfortable. But that is a fact that I've pondered many times recently.&lt;/p&gt;&lt;p&gt;My dad died unexpectedly on October 14, 1997. He was only 67 and still active and enjoying life. My memory of him was always as a low-key yet active guy. For me, that last snapshot of him from 1997 will be how I think of him for all time as there is no new data coming in.&lt;/p&gt;&lt;p&gt;It was the farthest thing from my mind when he died, but lately, through my wife and others, I've seen the emotions that come with watching a father become frail. And the thought has come to me that, for better or worse, I'll never experience that.&lt;/p&gt;&lt;p&gt;For some reason I find it a kind of heavy reality that this, quite normal, experience that most people will have, I will never have. That's just the fact of it.&lt;/p&gt;&lt;p&gt;Pondering &lt;i&gt;'never'&lt;/i&gt; has always been weighty for me.&lt;/p&gt;</description><pubDate>Mon, 15 Jun 2015 00:00:00 -0500</pubDate></item><item><guid>http://sprungcanary.net/posts-output/2015-06-03-who-am-i/</guid><link>http://sprungcanary.net/posts-output/2015-06-03-who-am-i/</link><title>Who Am I?</title><description>&lt;h4 id="_(btw,&amp;#95;this&amp;#95;is&amp;#95;not&amp;#95;the&amp;#95;long&amp;#95;inaugural&amp;#95;post&amp;#95;i&amp;#95;mentioned&amp;#95;before.&amp;#95;i&amp;#95;guess&amp;#95;it&amp;#95;didn't&amp;#95;have&amp;#95;to&amp;#95;come&amp;#95;next.)_"&gt;&lt;i&gt;(BTW, this is not the long inaugural post I mentioned before. I guess it didn't have to come next.)&lt;/i&gt;&lt;/h4&gt;&lt;blockquote&gt;&lt;p&gt; “When I discover who I am, I’ll be free.”&lt;br&gt;   ― &lt;i&gt;Ralph Ellison, Invisible Man&lt;/i&gt; &lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;This is a subject that has come to my mind a number of times. Probably more so lately because I've been interviewing. But it also comes up occasionally when talking to younger programmers. What do we (whatever we are) call ourselves? What do we think, to ourselves, that we do?&lt;/p&gt;&lt;p&gt;I work in computer software as a programmer. My degree is in Electrical Engineering. When I started out I called myself a software engineer. But that was mainly because I actually was an engineer by &lt;i&gt;degree&lt;/i&gt; and I guess, in some way, I wanted credit for that even though I never really &lt;i&gt;worked&lt;/i&gt; as an engineer (at least not in the sense that my degree would indicate). Turns out, companies don't mind giving out that title.&lt;/p&gt;&lt;p&gt;I no longer think that way. At least the part about needing credit. I was young.&lt;/p&gt;&lt;p&gt;Now, I do think that engineering, in its most general defintion, does include the kinds of things a programmer does. But I see enough use of the term 'software engineer' that could cummunicate more simply with the term 'programmer'. In my old age I just want to be simple and direct so that is what I've now been responding with when someone asks me what I do.&lt;/p&gt;&lt;p&gt;I'm a programmer.&lt;/p&gt;&lt;p&gt;I hear a lot of people say they are a 'developer'. That isn't bad if the context is understood. But I want to say one thing no matter who I'm talking to. Saying I'm a programmer saves me from saying I'm a &lt;i&gt;software&lt;/i&gt; developer. But I confess, all this was to lead up to what I really want to talk about.&lt;/p&gt;&lt;p&gt;Nearly my entire career I have noticed that a lot of programmers refer to themselves as a &lt;i&gt;pick-a-language&lt;/i&gt; programmer. During college I used APL, Prolog, and Lisp more than anything else. But I never would have thought to identify myself as a Lisp programmer, for instance. After leaving college I used C++ for nearly 5 years, then Objective-C for 2+ years, and then mostly Java for more years than I can count. Regardless of the time, I've always thought of myself simply as programmer. Now that I'm trying to do more Clojure, am I no longer a Java or iOS programmer? I know there are certain niche markets where you need to identify yourself more narrowly. In fact, I just remembered that I did used to call myself a NeXT programmer. I would still tell people that I am a programmer and if needed I would say I can do iOS programming.&lt;/p&gt;&lt;p&gt;Part of the reason for thinking this way is probably due to how I came into programming in college. Learning a computer language was always anchored in solving problems. I learned APL as a means to write CPU design simulation. I learned Lisp as a means to write image processing  and understanding programs. I learned Prolog as a means to write  expert systems. Later I studied some of these languages for themselves but that wasn't the original motivation. I think this stuck with me.&lt;/p&gt;&lt;p&gt;I'm somewhat sensitive to this because of the specific (narrow?) focus I usually see in job postings. Especially within the DoD world that I'm sometimes connected to. I get this. I get why this is. I'm not really arguing against it. But I have seen this result in people thinking of themselves (without much internal reflection) in very narrow ways. Specialization is cool. But picking language X and becoming and X programmer for life is not a good long term strategy these days. And to be honest it makes me sad. And to be even more selfishly honest I'm sad because the more a programmer views themself this way, the more it reinforces the narrow focus of most job listings. Which, I suppose, is what I &lt;i&gt;really&lt;/i&gt; wanted to talk about.&lt;/p&gt;&lt;p&gt;Maybe there's some arrogance buried there on my part. Could be, but it's an accurate description of where I am now. One thing I know, &lt;i&gt;I&lt;/i&gt; don't want to fall into an unrefelctive, narrow life. Which is why I think about these things. I'm not one to look down on other poeple that are content in their own place that they have chosen. But it is also true that some young programmers won't necessarily know the larger world of programming without someone encouraging them to look beyond what they currently know and what they are currently doing. I've found that employers vary widely in how much they encourage their people to look beyond the job they are doing. And I'm not even going to get into the current college situation.&lt;/p&gt;&lt;p&gt;This is all getting better with the rise of the term &lt;i&gt;polyglot&lt;/i&gt; programmer. While, to me, that's still just programing, I won't quibble (in general) if it leads to more job openings that emphasize programming &lt;i&gt;per se&lt;/i&gt;. And as for the the  so-called &lt;i&gt;full-stack&lt;/i&gt;, &lt;i&gt;hybrid&lt;/i&gt;, etc. developers, I'm not going there either. They are not at the heart of my concern.&lt;/p&gt;&lt;p&gt;So, I'm curious. What do you call yourself? I'm not talking about titles. How do you tell other people who you are to you? Was this natural or did you come to it over time? And how much should we care to talk about this with younger programmers? Or am I thinking too much about nothing?&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt; “Who are you?"&lt;br&gt;   "No one of consequence."&lt;br&gt;   "I must know."&lt;br&gt;   "Get used to disappointment.”&lt;br&gt;   ― &lt;i&gt;William Goldman, The Princess Bride&lt;/i&gt; &lt;/p&gt;&lt;/blockquote&gt;</description><pubDate>Wed, 03 Jun 2015 00:00:00 -0500</pubDate></item><item><guid>http://sprungcanary.net/posts-output/2015-05-17-soon-it-begins/</guid><link>http://sprungcanary.net/posts-output/2015-05-17-soon-it-begins/</link><title>Soon It Begins</title><description>&lt;h2 id="wait&amp;#95;for&amp;#95;it"&gt;Wait for it&lt;/h2&gt;&lt;p&gt;&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/g13EY3oEJI8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;p&gt;I've worked out enough of the kinks getting this blog going to just jump in and start. However, the inaugural post I have planned is likely a long one. It is something that has been in my head for a long while and I need to get it out before I can move on.&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt; I took a course in speed waiting. Now I can wait an hour in only ten minutes. - &lt;i&gt;Steven Wright&lt;/i&gt; &lt;/p&gt;&lt;/blockquote&gt;</description><pubDate>Sun, 17 May 2015 00:00:00 -0500</pubDate></item></channel></rss>
