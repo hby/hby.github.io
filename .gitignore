@@ -14,6 +14,6 @@
 *~
 
 # IDE files
-/.idea
+.idea/
 *.iml
 *.ipr
