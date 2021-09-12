@@ -2,7 +2,7 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
 <url>
 <loc>
-https://sprungcanary.net/authors-output/Bret Young/index.html
+http://sprungcanary.net/authors-output/Bret Young/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -10,7 +10,7 @@ https://sprungcanary.net/authors-output/Bret Young/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/index.html
+http://sprungcanary.net/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -18,7 +18,7 @@ https://sprungcanary.net/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/404.html
+http://sprungcanary.net/404.html
 </loc>
 <lastmod>
 2021-09-11
@@ -26,7 +26,7 @@ https://sprungcanary.net/404.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/archives/index.html
+http://sprungcanary.net/archives/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -34,7 +34,7 @@ https://sprungcanary.net/archives/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/tags/index.html
+http://sprungcanary.net/tags/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -42,7 +42,7 @@ https://sprungcanary.net/tags/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/pages-output/about/index.html
+http://sprungcanary.net/pages-output/about/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -50,7 +50,7 @@ https://sprungcanary.net/pages-output/about/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/tags-output/personal/index.html
+http://sprungcanary.net/tags-output/personal/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -58,7 +58,7 @@ https://sprungcanary.net/tags-output/personal/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/tags-output/music/index.html
+http://sprungcanary.net/tags-output/music/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -66,7 +66,7 @@ https://sprungcanary.net/tags-output/music/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/tags-output/clojure/index.html
+http://sprungcanary.net/tags-output/clojure/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -74,7 +74,7 @@ https://sprungcanary.net/tags-output/clojure/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/tags-output/repl/index.html
+http://sprungcanary.net/tags-output/repl/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -82,7 +82,7 @@ https://sprungcanary.net/tags-output/repl/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/tags-output/angular/index.html
+http://sprungcanary.net/tags-output/angular/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -90,7 +90,7 @@ https://sprungcanary.net/tags-output/angular/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/tags-output/clojurescript/index.html
+http://sprungcanary.net/tags-output/clojurescript/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -98,7 +98,7 @@ https://sprungcanary.net/tags-output/clojurescript/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/tags-output/cryogen/index.html
+http://sprungcanary.net/tags-output/cryogen/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -106,7 +106,7 @@ https://sprungcanary.net/tags-output/cryogen/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/tags-output/reagent/index.html
+http://sprungcanary.net/tags-output/reagent/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -114,7 +114,7 @@ https://sprungcanary.net/tags-output/reagent/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/tags-output/math/index.html
+http://sprungcanary.net/tags-output/math/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -122,7 +122,7 @@ https://sprungcanary.net/tags-output/math/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/tags-output/blog/index.html
+http://sprungcanary.net/tags-output/blog/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -130,7 +130,7 @@ https://sprungcanary.net/tags-output/blog/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/tags-output/workflow/index.html
+http://sprungcanary.net/tags-output/workflow/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -138,7 +138,7 @@ https://sprungcanary.net/tags-output/workflow/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/tags-output/react/index.html
+http://sprungcanary.net/tags-output/react/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -146,7 +146,7 @@ https://sprungcanary.net/tags-output/react/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/posts-output/2015-11-29-a-repl-story/index.html
+http://sprungcanary.net/posts-output/2015-11-29-a-repl-story/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -154,7 +154,7 @@ https://sprungcanary.net/posts-output/2015-11-29-a-repl-story/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/posts-output/2017-12-11-aoc-without-code/index.html
+http://sprungcanary.net/posts-output/2017-12-11-aoc-without-code/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -162,7 +162,7 @@ https://sprungcanary.net/posts-output/2017-12-11-aoc-without-code/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/posts-output/2019-11-14-moved-to-cryogen/index.html
+http://sprungcanary.net/posts-output/2019-11-14-moved-to-cryogen/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -170,7 +170,7 @@ https://sprungcanary.net/posts-output/2019-11-14-moved-to-cryogen/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/posts-output/2016-05-03-angular-to-reagent/index.html
+http://sprungcanary.net/posts-output/2016-05-03-angular-to-reagent/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -178,7 +178,7 @@ https://sprungcanary.net/posts-output/2016-05-03-angular-to-reagent/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/posts-output/2015-06-03-who-am-i/index.html
+http://sprungcanary.net/posts-output/2015-06-03-who-am-i/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -186,7 +186,7 @@ https://sprungcanary.net/posts-output/2015-06-03-who-am-i/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/posts-output/2015-06-15-ill-never-1/index.html
+http://sprungcanary.net/posts-output/2015-06-15-ill-never-1/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -194,7 +194,7 @@ https://sprungcanary.net/posts-output/2015-06-15-ill-never-1/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/posts-output/2021-09-11-wish-you-were-here/index.html
+http://sprungcanary.net/posts-output/2021-09-11-wish-you-were-here/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -202,7 +202,7 @@ https://sprungcanary.net/posts-output/2021-09-11-wish-you-were-here/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/posts-output/2017-04-22-my-kobayashi-maru/index.html
+http://sprungcanary.net/posts-output/2017-04-22-my-kobayashi-maru/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -210,7 +210,7 @@ https://sprungcanary.net/posts-output/2017-04-22-my-kobayashi-maru/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/posts-output/2015-05-17-soon-it-begins/index.html
+http://sprungcanary.net/posts-output/2015-05-17-soon-it-begins/index.html
 </loc>
 <lastmod>
 2021-09-11
@@ -218,7 +218,7 @@ https://sprungcanary.net/posts-output/2015-05-17-soon-it-begins/index.html
 </url>
 <url>
 <loc>
-https://sprungcanary.net/p/2/index.html
+http://sprungcanary.net/p/2/index.html
 </loc>
 <lastmod>
 2021-09-11
